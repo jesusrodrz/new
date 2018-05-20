@@ -1,0 +1,27 @@
+{
+  "name": "landing-page-template",
+  "version": "1.0.0",
+  "description": "Template for a landding page",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesusrodrz/landing-template.git"
+  },
+  "author": "Jesús Rodríguez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jesusrodrz/landing-template/issues"
+  },
+  "homepage": "https://github.com/jesusrodrz/landing-template#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-watch": "^5.0.0"
+  }
+}
