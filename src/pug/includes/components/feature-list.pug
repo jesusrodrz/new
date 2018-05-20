@@ -1,0 +1,12 @@
+mixin featuresList(items)
+  section.fuature-list
+    each item in items
+      article.feature-list__item
+        h3.feature-list__title #{item.title}
+        if item.adress
+          address.feature-list__element #{item.adress}
+        if item.title == 'Compras'
+          address.feature-list__element Fax #{item.tel}
+        else
+          address.feature-list__element Teléfono #{item.tel}
+        address.feature-list__element E-mail: #{item.email}

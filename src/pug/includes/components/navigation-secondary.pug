@@ -1,0 +1,11 @@
+mixin navBarSec(items)
+  nav.footer-navbar
+    ul.menu-ft
+      each item in items
+        li.menu-ft__item
+          a.menu-ft__link(href=item.url) #{item.name}
+          if item.subMenu
+            ul.menu-ft--sub-menu
+              each subItem in item.subMenu
+                li.menu-ft__item--sub-menu
+                  a.menu-ft__link--sub-menu(href=subItem.url) #{subItem.name}

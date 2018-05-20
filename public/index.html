@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    <link rel="stylesheet" href=".css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Page Title</title>
     <meta name="description" content="description">
   </head>
@@ -113,7 +113,104 @@
         </article>
       </section>
     </main>
-    <footer class="main-footer"></footer>
+    <footer class="main-footer">
+      <section class="section footer-nav">
+        <nav class="footer-navbar">
+          <ul class="menu-ft">
+            <li class="menu-ft__item"><a class="menu-ft__link" href="#">Nosotros</a>
+              <ul class="menu-ft--sub-menu">
+                <li class="menu-ft__item--sub-menu"><a class="menu-ft__link--sub-menu" href="#">Historia</a></li>
+                <li class="menu-ft__item--sub-menu"><a class="menu-ft__link--sub-menu" href="#">Instalaciones</a></li>
+                <li class="menu-ft__item--sub-menu"><a class="menu-ft__link--sub-menu" href="#">Nuestros Clientes</a></li>
+              </ul>
+            </li>
+            <li class="menu-ft__item"><a class="menu-ft__link" href="#">Productos</a>
+              <ul class="menu-ft--sub-menu">
+                <li class="menu-ft__item--sub-menu"><a class="menu-ft__link--sub-menu" href="#">Categorías</a></li>
+                <li class="menu-ft__item--sub-menu"><a class="menu-ft__link--sub-menu" href="#">Marcas</a></li>
+                <li class="menu-ft__item--sub-menu"><a class="menu-ft__link--sub-menu" href="#">Reposición de productos</a></li>
+              </ul>
+            </li>
+            <li class="menu-ft__item"><a class="menu-ft__link" href="#">Blog</a>
+              <ul class="menu-ft--sub-menu">
+                <li class="menu-ft__item--sub-menu"><a class="menu-ft__link--sub-menu" href="#">Lanzamientos</a></li>
+                <li class="menu-ft__item--sub-menu"><a class="menu-ft__link--sub-menu" href="#">Responsabilidad social</a></li>
+                <li class="menu-ft__item--sub-menu"><a class="menu-ft__link--sub-menu" href="#">Tips y consejos</a></li>
+                <li class="menu-ft__item--sub-menu"><a class="menu-ft__link--sub-menu" href="#">Eventos</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <form class="form-subcribe" id="subcribe" action="subcribe" method="get">
+          <label class="form-subcribe__label" for="subcribe">Suscribete</label>
+          <input class="form-subcribe__text" id="subcribeText" type="text" name="subcribe">
+          <input class="form-subcribe__btn" id="subcribeBtn" type="submit" value="Suscribete">
+          <input class="form-subcribe__checkbox" id="subcribeCheckbox" type="checkbox" name="subcribe"><span class="form-subcribe__terms">Acepto los <a class="form-subcribe__link" href="#">terminos y condiciones</a></span>
+        </form>
+      </section>
+      <section class="section contact">
+        <h2 class="setion__title--footer">Categorías</h2>
+        <form class="form-contact" id="contact" action="contact" method="get">
+          <p class="form__description">Escribanos o llámenos. Estaremos en contacto con usted a la brevedad posible.</p>
+          <label class="form-contact__label" for="contact_name">Nombre
+            <input class="form-contact__text" type="text" name="contact_name">
+          </label>
+          <label class="form-contact__label" for="contact_email">E-mail
+            <input class="form-contact__text" type="email" name="contact_email">
+          </label>
+          <label class="form-contact__label" for="contact_email">Consulta
+            <textarea class="form-contact__textarea" id="contactArea" name="contact_subject" cols="30" rows="10"></textarea>
+          </label>
+          <input class="form-contact__btn" id="contactBtn" type="submit" value="Suscribete">
+        </form>
+        <nav class="social-nav">
+          <h3 class="social-nav__title">Siguenos</h3>
+          <ul class="social-menu">
+            <li class="social-menu__item"><a class="social-menu__link" href="#">facebook</a></li>
+            <li class="social-menu__item"><a class="social-menu__link" href="#">twitter</a></li>
+            <li class="social-menu__item"><a class="social-menu__link" href="#">youtube</a></li>
+          </ul>
+        </nav>
+        <section class="fuature-list">
+          <article class="feature-list__item">
+            <h3 class="feature-list__title">Tienda Principal</h3>
+            <address class="feature-list__element">Jr. Junin 774, Cercado de Lima</address>
+            <address class="feature-list__element">Teléfono (01) 426-0955</address>
+            <address class="feature-list__element">E-mail: ealvarex@uysa.com.pe</address>
+          </article>
+          <article class="feature-list__item">
+            <h3 class="feature-list__title">Tienda de Plásticos</h3>
+            <address class="feature-list__element">Jr. Paruro 642, Cercado de Lima</address>
+            <address class="feature-list__element">Teléfono (01) 426-0955</address>
+            <address class="feature-list__element">E-mail: ealvarex@uysa.com.pe</address>
+          </article>
+          <article class="feature-list__item">
+            <h3 class="feature-list__title">Showroom Miraflores</h3>
+            <address class="feature-list__element">Calle Elías Aguirre 213, Miraflores</address>
+            <address class="feature-list__element">Teléfono 947229257</address>
+            <address class="feature-list__element">E-mail: dnakamura@uysa.com.pe</address>
+          </article>
+          <article class="feature-list__item">
+            <h3 class="feature-list__title">Venta Institusional</h3>
+            <address class="feature-list__element">Jr. Junin 774, Cercado de Lima</address>
+            <address class="feature-list__element">Teléfono (01) 427-4049</address>
+            <address class="feature-list__element">E-mail: mychicawa@uysa.com.pe</address>
+          </article>
+          <article class="feature-list__item">
+            <h3 class="feature-list__title">Ventas a Provincias</h3>
+            <address class="feature-list__element">Jr. Junin 774, Cercado de Lima</address>
+            <address class="feature-list__element">Teléfono (01) 427-1608</address>
+            <address class="feature-list__element">E-mail: salarcon@uysa.com.pe</address>
+          </article>
+          <article class="feature-list__item">
+            <h3 class="feature-list__title">Compras</h3>
+            <address class="feature-list__element">Jr. Junin 774, Cercado de Lima</address>
+            <address class="feature-list__element">Fax (01) 428-3994</address>
+            <address class="feature-list__element">E-mail: jegoavil@uysa.com.pe</address>
+          </article>
+        </section>
+      </section>
+    </footer>
     <script src="js/scripts.js"></script>
   </body>
 </html>
