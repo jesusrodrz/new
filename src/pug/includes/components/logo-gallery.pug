@@ -1,0 +1,5 @@
+mixin logoGallery(items)
+  article.logo-gallery
+    each item in items
+      figure.logo-gallery__fig
+        img.logo-gallery__img(src=item.src, alt=item.name)

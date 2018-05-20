@@ -1,0 +1,7 @@
+mixin featureGallery(items)
+  article.features-gallery
+    each item in items
+      article.features-gallery__item
+        h3.features-gallery__item-title() #{item.name}
+        figure.features-gallery__fig
+          img.features-gallery__fig(src=item.src, alt=item.name)

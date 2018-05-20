@@ -1,0 +1,9 @@
+mixin blogGrid(items)
+  article.blog-grid
+    each item in items
+      article.post
+        figure.post__fig
+          img.post__img(src=item.src, alt=item.postTitle)
+        h3.post__title #{item.postTitle}
+        p.post__excert #{item.postExcert}
+        a.post__link(href=item.postLink)

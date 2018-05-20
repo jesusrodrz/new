@@ -29,7 +29,7 @@ gulp.task('pug', () => {
 });
 
 gulp.task('default', () => {
-  gulp.watch(['src/pug/**/*.pug', 'src/sass/**/*.scss'], ['pug', 'styles'])
-  // watch('./src/sass/**/*.scss', () => gulp.start('styles'));
-  // watch('./src/pug/**/*.pug', () => gulp.start('pug'));
+  // gulp.watch(['src/pug/**/*.pug', 'src/sass/**/*.scss'], ['pug', 'styles'])
+  watch('./src/sass/**/*.scss', () => gulp.start('styles'));
+  watch('./src/pug/**/*.pug', () => gulp.start('pug'));
 });

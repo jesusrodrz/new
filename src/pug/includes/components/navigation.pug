@@ -1,0 +1,11 @@
+mixin navBar(items)
+  nav.main-nav.navbar
+    ul.menu
+      each item in items
+        li.menu__item
+          a.menu__link(href=item.url) #{item.name}
+          if item.subMenu
+            ul.menu--sub-menu
+              each subItem in item.subMenu
+                li.menu__item--sub-menu
+                  a.menu__link--sub-menu(href=subItem.url) #{subItem.name}

@@ -1,23 +1,26 @@
 extends ../includes/template
+include ../includes/components/navigation
+include ../includes/components/features-gallery
+include ../includes/components/logo-gallery
+include ../includes/components/blog-grid
+
 block metatags
   title Page Title
   meta(name="description", content="description")
+
 block main
+  - var items = [{name:'Inicio',url:'#'},{name:'Nosotros',url:'#',subMenu:[{name:'Historia',url:'#'},{name:'Instalaciones',url:'#'},{name:'Nuestros Clientes',url:'#'}]},{name:'Productos',url:'#',subMenu:[{name:'Categorías',url:'#'},{name:'Marcas',url:'#'},{name:'Reposición de productos',url:'#'},]},{name:'Blog',url:'#',subMenu:[{name:'Lanzamientos',url:'#'},{name:'Responsabilidad social',url:'#'},{name:'Tips y consejos',url:'#'},{name:'Eventos',url:'#'},]},{name:'Contacto',url:'#'}];
+
+  - var features = [{name:'Cristalería',src:'#'},{name:'Vajilla',src:'#'},{name:'Ollas y Sarténes',src:'#'},{name:'Utencilios de Cocina',src:'#'},{name:'Buffet',src:'#'},{name:'Repostería',src:'#'}]
+
+  - var brands = [{name:'brand logo',src:'#'},{name:'brand logo',src:'#'},{name:'brand logo',src:'#'},{name:'brand logo',src:'#'},{name:'brand logo',src:'#'},{name:'brand logo',src:'#'}];
+
+  - var posts = [{postTitle:'Lorem ipsum dolor', postExcert:'lorem ipsum lorem dolor. Consectetur adipiscig elit',src:'#', postLink:'#'},{postTitle:'Lorem ipsum dolor', postExcert:'lorem ipsum lorem dolor. Consectetur adipiscig elit',src:'#', postLink:'#'},{postTitle:'Lorem ipsum dolor', postExcert:'lorem ipsum lorem dolor. Consectetur adipiscig elit',src:'#', postLink:'#'},{postTitle:'Lorem ipsum dolor', postExcert:'lorem ipsum lorem dolor. Consectetur adipiscig elit',src:'#', postLink:'#'}]
+
   header.main-header
     figure.logo
       img.logo__img(src="#", alt="page logo")
-    nav.main-nav.navbar
-      ul.menu
-        li.menu__item
-          a.menu__link(href="#") Inicio
-        li.menu__item
-          a.menu__link(href="#") Nosotros
-        li.menu__item
-          a.menu__link(href="#") Productos
-        li.menu__item
-          a.menu__link(href="#") Blog
-        li.menu__item
-          a.menu__link(href="#") Contacto
+    +navBar(items)
     section.header-section--search-bar
       input#searchInput.search-bar(type="text", name="searchInput")
     section.header-section--chat
@@ -26,71 +29,11 @@ block main
     section.section.banner-slider
     section.section.categories
       h2.setion__title Categorías
-      .features-gallery
-        article.features-gallery__item
-          h3.features-gallery__item-title Cristalería
-          figure.features-gallery__fig
-            img.features-gallery__fig(src="", alt="Cristalería")
-        article.features-gallery__item
-          h3.features-gallery__item-title Vajilla
-          figure.features-gallery__fig
-            img.features-gallery__fig(src="#", alt="Vajilla")
-        article.features-gallery__item
-          h3.features-gallery__item-title Ollas y Sarténes
-          figure.features-gallery__fig
-            img.features-gallery__fig(src="#", alt="Ollas y Sarténes")
-        article.features-gallery__item
-          h3.features-gallery__item-title Utencilios de Cocina
-          figure.features-gallery__fig
-            img.features-gallery__fig(src="#", alt="Utencilios de Cocina")
-        article.features-gallery__item
-          h3.features-gallery__item-title Buffet
-          figure.features-gallery__fig
-            img.features-gallery__fig(src="#", alt="Buffet")
-        article.features-gallery__item
-          h3.features-gallery__item-title Repostería
-          figure.features-gallery__fig
-            img.features-gallery__fig(src="", alt="Repostería")
+      +featureGallery(features)
     section.section.brands
       h2.setion__title Marcas destacadas    
-      .logo-gallery
-        figure.logo-gallery__fig
-          img.logo-gallery__img(src="#", alt="")
-        figure.logo-gallery__fig
-          img.logo-gallery__img(src="#", alt="")
-        figure.logo-gallery__fig
-          img.logo-gallery__img(src="#", alt="")
-        figure.logo-gallery__fig
-          img.logo-gallery__img(src="#", alt="")
-        figure.logo-gallery__fig
-          img.logo-gallery__img(src="#", alt="")
-        figure.logo-gallery__fig
-          img.logo-gallery__img(src="#", alt="")
+      +logoGallery(brands)
     section.section.blog
       h2.setion__title Visita nuestro blog    
-      .blog-grid
-        article.post
-          figure.post__fig
-            img.post__img(src="#", alt="post img")
-          h3.post__title Lorem ipsum dolor
-          p.post__excert lorem ipsum lorem dolor. Consectetur adipiscig elit
-          a.post__link(href="#")
-        article.post
-          figure.post__fig
-            img.post__img(src="#", alt="post img")
-          h3.post__title Lorem ipsum dolor
-          p.post__excert lorem ipsum lorem dolor. Consectetur adipiscig elit
-          a.post__link(href="#")
-        article.post
-          figure.post__fig
-            img.post__img(src="#", alt="post img")
-          h3.post__title Lorem ipsum dolor
-          p.post__excert lorem ipsum lorem dolor. Consectetur adipiscig elit
-          a.post__link(href="#")
-        article.post
-          figure.post__fig
-            img.post__img(src="#", alt="post img")
-          h3.post__title Lorem ipsum dolor
-          p.post__excert lorem ipsum lorem dolor. Consectetur adipiscig elit
-          a.post__link(href="#")
+      +blogGrid(posts)
   footer.main-footer
