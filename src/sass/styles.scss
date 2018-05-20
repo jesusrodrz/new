@@ -8,6 +8,7 @@
 @import "config/mixins";
 
 // Base and elements (generic)
+@import "base/normalize";
 @import "base/base";
 
 // LAYOUT
@@ -27,3 +28,15 @@
   // Todos los hacks que hayas necesitado para solucionar conflictos
   // o resolver situaciones extremas. Se espera poder mejorarlos luego.
 @import "hacks/hacks";
+
+
+// /* 
+//   color pallete
+//     red #EC1C24
+
+//     dark-gray #333
+//     soft-dark-gray #666
+//     light-gray #ddd
+
+//     gray #cccccc
+// */
