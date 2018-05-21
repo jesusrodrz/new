@@ -414,6 +414,10 @@ h3 {
 h4 {
   font-size: 14.54545px; }
 
+figure {
+  padding: 0;
+  margin: 0; }
+
 .main-header {
   display: grid;
   grid-template-columns: 4fr 2fr;
@@ -445,9 +449,12 @@ h4 {
   grid-column: 1 / 2; }
 
 .section {
-  max-width: 1200px;
   position: relative;
   margin: 3rem auto 5rem; }
+  .section, .section--wrapper {
+    max-width: 1200px; }
+  .section--wrapper {
+    margin: auto; }
   .section__title {
     font-size: 1.8rem;
     font-weight: normal;
@@ -466,6 +473,9 @@ h4 {
     right: 0;
     background-color: #ccc;
     width: calc(100% - 3rem - 5px); }
+
+.main--footer {
+  border-top: 6px solid #EC1C24; }
 
 .chat-btn {
   display: inline-flex;
@@ -555,8 +565,31 @@ h4 {
     -webkit-transform: translateY(-80%) translateX(-50%);
             transform: translateY(-80%) translateX(-50%);
     left: 50%; }
-    .features-gallery__logo:hover {
-      background-color: #EC1C24; }
+  .features-gallery__item:hover .features-gallery__logo {
+    background-color: #EC1C24; }
+
+.logo-gallery {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between; }
+  .logo-gallery__fig {
+    margin: 0 -8px;
+    margin: 0;
+    padding: 0 16px;
+    margin: 0 8px;
+    width: 16.66667%;
+    height: 40vh;
+    max-height: 150px;
+    border: 1.5px solid #ccc;
+    display: flex;
+    align-items: center; }
+    .logo-gallery__fig:first-child {
+      margin-left: 0; }
+    .logo-gallery__fig:last-child {
+      margin-right: 0; }
+  .logo-gallery__img {
+    width: 100%; }
 
 .search-bar__text, .search-bar__btn {
   position: absolute;
@@ -591,4 +624,29 @@ h4 {
 
 .search-bar__btn {
   background-color: #666;
-  width: 2.5rem; }
+  width: 2.5rem;
+  cursor: pointer; }
+
+.blog-grid {
+  --item-height:50vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 16px; }
+
+.post {
+  color: #444; }
+  .post__fig {
+    width: 100%;
+    height: var(--item-height);
+    background-color: #ccc; }
+  .post__img {
+    display: block;
+    width: 100%;
+    height: auto; }
+  .post__excert {
+    height: 4rem;
+    border-bottom: 1.5px solid #ccc; }
+  .post__link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #444; }

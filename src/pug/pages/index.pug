@@ -15,7 +15,7 @@ block main
 
   - var features = [{name:'Cristalería',src:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpXK5cF9dZGu2QGEUeyu5Hqsva9Zo92L-tiN9Gffv5AHPoF2uaOw'},{name:'Vajilla',src:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpXK5cF9dZGu2QGEUeyu5Hqsva9Zo92L-tiN9Gffv5AHPoF2uaOw'},{name:'Ollas y Sarténes',src:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpXK5cF9dZGu2QGEUeyu5Hqsva9Zo92L-tiN9Gffv5AHPoF2uaOw'},{name:'Utencilios de Cocina',src:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpXK5cF9dZGu2QGEUeyu5Hqsva9Zo92L-tiN9Gffv5AHPoF2uaOw'},{name:'Buffet',src:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpXK5cF9dZGu2QGEUeyu5Hqsva9Zo92L-tiN9Gffv5AHPoF2uaOw'},{name:'Repostería',src:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpXK5cF9dZGu2QGEUeyu5Hqsva9Zo92L-tiN9Gffv5AHPoF2uaOw'}]
 
-  - var brands = [{name:'brand logo',src:'#'},{name:'brand logo',src:'#'},{name:'brand logo',src:'#'},{name:'brand logo',src:'#'},{name:'brand logo',src:'#'},{name:'brand logo',src:'#'}];
+  - var brands = [{name:'brand logo',src:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR55DXCWS-u-f-dkuZcDejekqNhlVYjgeISjlnCYz7WZKSsJORv'},{name:'brand logo',src:'http://posgrados.cicese.mx/img/logos/cicese.png'},{name:'brand logo',src:'https://staticaltmetric.s3.amazonaws.com/uploads/2015/10/dark-logo-for-site.png'},{name:'brand logo',src:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR55DXCWS-u-f-dkuZcDejekqNhlVYjgeISjlnCYz7WZKSsJORv'},{name:'brand logo',src:'http://posgrados.cicese.mx/img/logos/cicese.png'},{name:'brand logo',src:'https://staticaltmetric.s3.amazonaws.com/uploads/2015/10/dark-logo-for-site.png'}];
 
   - var posts = [{postTitle:'Lorem ipsum dolor', postExcert:'lorem ipsum lorem dolor. Consectetur adipiscig elit',src:'#', postLink:'#'},{postTitle:'Lorem ipsum dolor', postExcert:'lorem ipsum lorem dolor. Consectetur adipiscig elit',src:'#', postLink:'#'},{postTitle:'Lorem ipsum dolor', postExcert:'lorem ipsum lorem dolor. Consectetur adipiscig elit',src:'#', postLink:'#'},{postTitle:'Lorem ipsum dolor', postExcert:'lorem ipsum lorem dolor. Consectetur adipiscig elit',src:'#', postLink:'#'}]
 
@@ -47,36 +47,39 @@ block main
       h2.section__title Visita nuestro blog    
       +blogGrid(posts)
   footer.main-footer
-    section.section.footer-nav
-      +navBarSec(footerNavItems)
-      form.form-subcribe#subcribe(action="subcribe", method="get")
-        label.form-subcribe__label(for="subcribe") Suscribete
-        input.form-subcribe__text#subcribeText(type="text", name="subcribe")
-        input.form-subcribe__btn#subcribeBtn(type="submit", value="Suscribete")
-        input.form-subcribe__checkbox#subcribeCheckbox(type="checkbox", name="subcribe")
-        span.form-subcribe__terms.
-          Acepto los #[a.form-subcribe__link(href='#') terminos y condiciones]
-    section.section.contact
-      h2.setion__title--footer Categorías
-      form.form-contact#contact(action="contact", method="get")
-        p.form__description Escribanos o llámenos. Estaremos en contacto con usted a la brevedad posible.
-        label.form-contact__label(for="contact_name") Nombre
-          input.form-contact__text(type="text", name="contact_name")
-        label.form-contact__label(for="contact_email") E-mail
-          input.form-contact__text(type="email", name="contact_email")
-        label.form-contact__label(for="contact_email") Consulta
-          textarea#contactArea.form-contact__textarea(name="contact_subject", cols="30", rows="10")
-        input.form-contact__btn#contactBtn(type="submit", value="Suscribete")
-      nav.social-nav
-        h3.social-nav__title Siguenos
-        ul.social-menu
-          -var links = {facebook:'#',twitter:'#', youtube:'#'}
-          each link,index in links
-            li.social-menu__item
-              a.social-menu__link(href=link) #{index}
-      -var featuresList = [{title:'Tienda Principal',adress:'Jr. Junin 774, Cercado de Lima', tel:'(01) 426-0955', email:'ealvarex@uysa.com.pe'},{title:'Tienda de Plásticos',adress:'Jr. Paruro 642, Cercado de Lima', tel:'(01) 426-0955', email:'ealvarex@uysa.com.pe'},{title:'Showroom Miraflores',adress:'Calle Elías Aguirre 213, Miraflores', tel:'947229257', email:'dnakamura@uysa.com.pe'},{title:'Venta Institusional',adress:'Jr. Junin 774, Cercado de Lima', tel:'(01) 427-4049', email:'mychicawa@uysa.com.pe'},{title:'Ventas a Provincias',adress:'Jr. Junin 774, Cercado de Lima', tel:'(01) 427-1608', email:'salarcon@uysa.com.pe'},{title:'Compras',adress:'Jr. Junin 774, Cercado de Lima', tel:'(01) 428-3994', email:'jegoavil@uysa.com.pe'}]
+    section.footer-nav
+      .section--wrapper
+        +navBarSec(footerNavItems)
+        form.form-subcribe#subcribe(action="subcribe", method="get")
+          label.form-subcribe__label(for="subcribe") Suscribete
+          input.form-subcribe__text#subcribeText(type="text", name="subcribe")
+          input.form-subcribe__btn#subcribeBtn(type="submit", value="Suscribete")
+          input.form-subcribe__checkbox#subcribeCheckbox(type="checkbox", name="subcribe")
+          span.form-subcribe__terms.
+            Acepto los #[a.form-subcribe__link(href='#') terminos y condiciones]
+    section.section--footer.contact
+      .section--wrapper
+        h2.setion__title--footer Contacto
+        form.form-contact#contact(action="contact", method="get")
+          p.form__description Escribanos o llámenos. Estaremos en contacto con usted a la brevedad posible.
+          label.form-contact__label(for="contact_name") Nombre
+            input.form-contact__text(type="text", name="contact_name")
+          label.form-contact__label(for="contact_email") E-mail
+            input.form-contact__text(type="email", name="contact_email")
+          label.form-contact__label(for="contact_email") Consulta
+            textarea#contactArea.form-contact__textarea(name="contact_subject", cols="30", rows="10")
+          input.form-contact__btn#contactBtn(type="submit", value="Suscribete")
+        nav.social-nav
+          h3.social-nav__title Siguenos
+          ul.social-menu
+            -var links = {facebook:'#',twitter:'#', youtube:'#'}
+            each link,index in links
+              li.social-menu__item
+                a.social-menu__link(href=link) #{index}
+        -var featuresList = [{title:'Tienda Principal',adress:'Jr. Junin 774, Cercado de Lima', tel:'(01) 426-0955', email:'ealvarex@uysa.com.pe'},{title:'Tienda de Plásticos',adress:'Jr. Paruro 642, Cercado de Lima', tel:'(01) 426-0955', email:'ealvarex@uysa.com.pe'},{title:'Showroom Miraflores',adress:'Calle Elías Aguirre 213, Miraflores', tel:'947229257', email:'dnakamura@uysa.com.pe'},{title:'Venta Institusional',adress:'Jr. Junin 774, Cercado de Lima', tel:'(01) 427-4049', email:'mychicawa@uysa.com.pe'},{title:'Ventas a Provincias',adress:'Jr. Junin 774, Cercado de Lima', tel:'(01) 427-1608', email:'salarcon@uysa.com.pe'},{title:'Compras',adress:'Jr. Junin 774, Cercado de Lima', tel:'(01) 428-3994', email:'jegoavil@uysa.com.pe'}]
 
-      +featuresList(featuresList)
-    section.section.copyright
-      small.copyright__text Unión Ychicawa - 2018 Todos lo Derechos Reservados 
+        +featuresList(featuresList)
+    section.section--footer.copyright
+      .section--wrapper
+        small.copyright__text Unión Ychicawa - 2018 Todos lo Derechos Reservados 
         

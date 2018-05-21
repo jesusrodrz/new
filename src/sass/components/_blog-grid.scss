@@ -1,0 +1,35 @@
+.blog-grid{
+  --item-height:50vh;
+  display: grid;
+  grid-template: {
+    columns:repeat(4,1fr);
+    // rows:var(--item-height);
+  }
+  grid-gap: $gap;
+}
+
+.post{
+  $text-color:#444;
+  color: $text-color;
+  &__fig{
+
+    width: 100%;
+    height: var(--item-height);
+    background-color: $secondary-color_light;
+    
+  }
+  &__img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  &__excert{
+    height: 4rem;
+    border-bottom: 1.5px solid $secondary-color_light;
+  }
+  &__link{
+    text-decoration: none;
+    font-weight: bold;
+    color: $text-color;
+  }
+}

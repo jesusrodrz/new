@@ -45,10 +45,16 @@
 }
 
 .section{
-  max-width: 1200px;
+  &,&--wrapper{
+    max-width: 1200px;
+  }
+  &--wrapper{
+    margin: auto
+  }
+
   position: relative;
   margin: 3rem auto 5rem;
-  // margin-top: 3rem;
+
   &__title{
     font-size: 1.8rem;
     font-weight: normal;
@@ -73,7 +79,7 @@
   }
 }
 
-.categories{
-  // background-color: #45f;
+.main-footer{
+  border-top: 6px solid $primary-color;
 }
 
