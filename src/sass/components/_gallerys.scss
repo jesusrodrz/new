@@ -1,0 +1,70 @@
+:root{
+  --item-height: 0;
+}
+.features-gallery{
+  display: grid;
+  grid-auto-rows: var(--item-height);
+  grid-gap: $gap;
+  grid-template:{
+    columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+  }
+  &__item-title{
+    margin: 0;
+    padding: .8em;
+    text-align: center;
+    font-size: .8em;
+    font-weight: 400; 
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 2em;
+    width: 100%;
+    background-color: rgba(255, 255, 255,.7);
+    border: solid 5px rgba(255, 255, 255,.3);
+    background-size: contain;
+    background-clip: padding-box;
+
+  }
+  
+  
+  &__item{
+    position: relative;
+    // height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  &__fig{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    // background-color: aqua;
+    margin: 0;
+    padding: 0;
+    // max-width: 100%;
+
+  }
+  &__img{
+    display: inline-block;
+    // display: none;
+    height: 100%;
+    width: 100%;
+    // width: auto;
+  }
+  &__logo{
+    width: 70%;
+    height: var(--item-height);
+    border-radius: 50%;
+    background-color: white;
+    transition: background-color ease .4s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-80%) translateX(-50%);
+    left: 50%;
+    
+    &:hover{ background-color: $primary-color;}
+  }
+  
+}

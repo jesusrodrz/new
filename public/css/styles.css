@@ -400,7 +400,7 @@ template {
 
 body {
   margin: 0;
-  font-family: "sans-serif"; }
+  font-family: helvetica; }
 
 h1 {
   font-size: 52.8px; }
@@ -413,3 +413,182 @@ h3 {
 
 h4 {
   font-size: 14.54545px; }
+
+.main-header {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  grid-template-rows: 6rem 4rem 2.5rem;
+  grid-gap: 16px; }
+
+.navbar {
+  grid-column: 1 / span 2;
+  background-color: #EC1C24; }
+
+.logo {
+  grid-column: 1 / span 2;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+  .logo__img {
+    display: block;
+    height: 100%; }
+
+.header-section--chat, .header-section--search-bar {
+  position: relative; }
+
+.header-section--chat {
+  grid-column: 2 / 3; }
+
+.header-section--search-bar {
+  grid-column: 1 / 2; }
+
+.section {
+  max-width: 1200px;
+  position: relative;
+  margin: 3rem auto 5rem; }
+  .section__title {
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: #666; }
+  .section::after, .section::before {
+    content: '';
+    height: 3.2px;
+    position: absolute;
+    top: -2rem;
+    display: block; }
+  .section::after {
+    left: 0;
+    width: 3rem;
+    background-color: #EC1C24; }
+  .section::before {
+    right: 0;
+    background-color: #ccc;
+    width: calc(100% - 3rem - 5px); }
+
+.chat-btn {
+  display: inline-flex;
+  border-radius: 1.25rem;
+  height: 100%;
+  border: solid 1.5px #ccc;
+  text-decoration: none;
+  color: #000;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem 3rem .5rem 4rem; }
+
+.menu {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+  .menu, .menu ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+    padding: 0; }
+  .menu ul {
+    display: none; }
+  .menu__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.2em; }
+  .menu__link {
+    color: white;
+    text-decoration: none;
+    line-height: 1.2em;
+    font-size: 1.2em;
+    text-transform: uppercase; }
+
+:root {
+  --item-height: 0; }
+
+.features-gallery {
+  display: grid;
+  grid-auto-rows: var(--item-height);
+  grid-gap: 16px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
+  .features-gallery__item-title {
+    margin: 0;
+    padding: .8em;
+    text-align: center;
+    font-size: .8em;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 2em;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: solid 5px rgba(255, 255, 255, 0.3);
+    background-size: contain;
+    background-clip: padding-box; }
+  .features-gallery__item {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+  .features-gallery__fig {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0; }
+  .features-gallery__img {
+    display: inline-block;
+    height: 100%;
+    width: 100%; }
+  .features-gallery__logo {
+    width: 70%;
+    height: var(--item-height);
+    border-radius: 50%;
+    background-color: white;
+    transition: background-color ease .4s;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-80%) translateX(-50%);
+            transform: translateY(-80%) translateX(-50%);
+    left: 50%; }
+    .features-gallery__logo:hover {
+      background-color: #EC1C24; }
+
+.search-bar__text, .search-bar__btn {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  border-radius: 1.25rem;
+  outline: none;
+  border: none; }
+
+.search-bar__text {
+  max-width: 800px;
+  width: 100%;
+  background-color: #ccc;
+  color: #000;
+  padding-left: 2rem; }
+
+.search-bar__text::-webkit-input-placeholder {
+  color: #000;
+  opacity: 1; }
+
+.search-bar__text:-ms-input-placeholder {
+  color: #000;
+  opacity: 1; }
+
+.search-bar__text::-ms-input-placeholder {
+  color: #000;
+  opacity: 1; }
+
+.search-bar__text::placeholder {
+  color: #000;
+  opacity: 1; }
+
+.search-bar__btn {
+  background-color: #666;
+  width: 2.5rem; }

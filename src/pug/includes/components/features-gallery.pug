@@ -3,5 +3,6 @@ mixin featureGallery(items)
     each item in items
       article.features-gallery__item
         h3.features-gallery__item-title() #{item.name}
+        .features-gallery__logo
         figure.features-gallery__fig
-          img.features-gallery__fig(src=item.src, alt=item.name)
+          img.features-gallery__img(src=item.src, alt=item.name)

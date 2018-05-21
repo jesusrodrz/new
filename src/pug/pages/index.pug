@@ -13,31 +13,38 @@ block metatags
 block main
   - var navItems = [{name:'Inicio',url:'#'},{name:'Nosotros',url:'#',subMenu:[{name:'Historia',url:'#'},{name:'Instalaciones',url:'#'},{name:'Nuestros Clientes',url:'#'}]},{name:'Productos',url:'#',subMenu:[{name:'Categorías',url:'#'},{name:'Marcas',url:'#'},{name:'Reposición de productos',url:'#'},]},{name:'Blog',url:'#',subMenu:[{name:'Lanzamientos',url:'#'},{name:'Responsabilidad social',url:'#'},{name:'Tips y consejos',url:'#'},{name:'Eventos',url:'#'},]},{name:'Contacto',url:'#'}];
 
-  - var features = [{name:'Cristalería',src:'#'},{name:'Vajilla',src:'#'},{name:'Ollas y Sarténes',src:'#'},{name:'Utencilios de Cocina',src:'#'},{name:'Buffet',src:'#'},{name:'Repostería',src:'#'}]
+  - var features = [{name:'Cristalería',src:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpXK5cF9dZGu2QGEUeyu5Hqsva9Zo92L-tiN9Gffv5AHPoF2uaOw'},{name:'Vajilla',src:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpXK5cF9dZGu2QGEUeyu5Hqsva9Zo92L-tiN9Gffv5AHPoF2uaOw'},{name:'Ollas y Sarténes',src:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpXK5cF9dZGu2QGEUeyu5Hqsva9Zo92L-tiN9Gffv5AHPoF2uaOw'},{name:'Utencilios de Cocina',src:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpXK5cF9dZGu2QGEUeyu5Hqsva9Zo92L-tiN9Gffv5AHPoF2uaOw'},{name:'Buffet',src:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpXK5cF9dZGu2QGEUeyu5Hqsva9Zo92L-tiN9Gffv5AHPoF2uaOw'},{name:'Repostería',src:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpXK5cF9dZGu2QGEUeyu5Hqsva9Zo92L-tiN9Gffv5AHPoF2uaOw'}]
 
   - var brands = [{name:'brand logo',src:'#'},{name:'brand logo',src:'#'},{name:'brand logo',src:'#'},{name:'brand logo',src:'#'},{name:'brand logo',src:'#'},{name:'brand logo',src:'#'}];
 
   - var posts = [{postTitle:'Lorem ipsum dolor', postExcert:'lorem ipsum lorem dolor. Consectetur adipiscig elit',src:'#', postLink:'#'},{postTitle:'Lorem ipsum dolor', postExcert:'lorem ipsum lorem dolor. Consectetur adipiscig elit',src:'#', postLink:'#'},{postTitle:'Lorem ipsum dolor', postExcert:'lorem ipsum lorem dolor. Consectetur adipiscig elit',src:'#', postLink:'#'},{postTitle:'Lorem ipsum dolor', postExcert:'lorem ipsum lorem dolor. Consectetur adipiscig elit',src:'#', postLink:'#'}]
 
   - var footerNavItems = [{name:'Nosotros',url:'#',subMenu:[{name:'Historia',url:'#'},{name:'Instalaciones',url:'#'},{name:'Nuestros Clientes',url:'#'}]},{name:'Productos',url:'#',subMenu:[{name:'Categorías',url:'#'},{name:'Marcas',url:'#'},{name:'Reposición de productos',url:'#'},]},{name:'Blog',url:'#',subMenu:[{name:'Lanzamientos',url:'#'},{name:'Responsabilidad social',url:'#'},{name:'Tips y consejos',url:'#'},{name:'Eventos',url:'#'},]}]
+  //- header.main-header
+  //-   p 1
+  //-   p 2
+  //-   p 3
+  //-   p 4
   header.main-header
     figure.logo
-      img.logo__img(src="#", alt="page logo")
+      img.logo__img(src="https://www.payfast.co.za/storage/PayFast-logo.png", alt="page logo")
     +navBar(navItems)
     section.header-section--search-bar
-      input#searchInput.search-bar(type="text", name="searchInput")
+      input#searchInput.search-bar__text(type="text", name="searchInput",placeholder='¿Qué producto o marca estás buscando?')
+      button#searchBtn.search-bar__btn(type="submit")
     section.header-section--chat
-      a#chatTrigger.chat-btn
+      a#chatTrigger.chat-btn(href='#')
+        span.chat-btn__text ¿Consultas? Chat Online
   main.main-content
     section.section.banner-slider
     section.section.categories
-      h2.setion__title Categorías
+      h2.section__title Categorías
       +featureGallery(features)
     section.section.brands
-      h2.setion__title Marcas destacadas    
+      h2.section__title Marcas destacadas    
       +logoGallery(brands)
     section.section.blog
-      h2.setion__title Visita nuestro blog    
+      h2.section__title Visita nuestro blog    
       +blogGrid(posts)
   footer.main-footer
     section.section.footer-nav

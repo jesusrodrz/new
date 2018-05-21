@@ -1,0 +1,36 @@
+.menu{
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+  &,ul{
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul{
+    display: none;
+  }
+  
+  &__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.2em;
+    
+  }
+  &__link{
+    color: white;
+    text-decoration: none;
+    line-height: 1.2em;
+    font-size: 1.2em;
+    text-transform: uppercase;
+  }
+}
