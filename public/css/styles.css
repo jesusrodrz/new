@@ -507,30 +507,17 @@ figure {
   grid-template-columns: 4fr 2fr;
   grid-template-rows: 100px 4rem 2.5rem;
   grid-gap: 16px; }
-
-.navbar {
-  grid-column: 1 / span 2;
-  background-color: #EC1C24; }
-
-.logo {
-  grid-column: 1 / span 2;
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  margin: 0;
-  padding: 0; }
-  .logo__img {
-    display: block;
-    height: 100%; }
-
-.header-section--chat, .header-section--search-bar {
-  position: relative; }
-
-.header-section--chat {
-  grid-column: 2 / 3; }
-
-.header-section--search-bar {
-  grid-column: 1 / 2; }
+  .main-header > :nth-child(1) {
+    grid-column: 1 / span 2; }
+  .main-header > :nth-child(2) {
+    grid-column: 1 / span 2;
+    background-color: #EC1C24; }
+  .main-header > :nth-child(3), .main-header > :nth-child(4) {
+    position: relative; }
+  .main-header > :nth-child(3) {
+    grid-column: 1 / 2; }
+  .main-header > :nth-child(4) {
+    grid-column: 2 / 3; }
 
 .section {
   position: relative;
@@ -539,42 +526,11 @@ figure {
     max-width: 1200px; }
   .section--wrapper {
     margin: auto; }
-  .section__title {
-    font-size: 1.8rem;
-    font-weight: normal;
-    color: #666; }
-    .section__title--footer {
-      font-weight: normal;
-      margin-bottom: -1rem;
-      font-size: 1.7em; }
-  .section::after, .section::before {
-    content: '';
-    height: 3.2px;
-    position: absolute;
-    top: -2rem;
-    display: block; }
-  .section::after {
-    left: 0;
-    width: 3rem;
-    background-color: #EC1C24; }
-  .section::before {
-    right: 0;
-    background-color: #ccc;
-    width: calc(100% - 3rem - 5px); }
 
-.main-footer {
-  border-top: 6px solid #EC1C24;
-  padding: 0;
-  margin: 0; }
-
-.footer-nav {
-  padding: 0;
-  margin: 0;
-  background-color: #666; }
-  .footer-nav__container {
-    display: grid;
-    grid-gap: 16px;
-    grid-template-columns: 1fr 1fr; }
+.footer-nav__container {
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: 1fr 1fr; }
 
 .subcribe {
   justify-self: end; }
@@ -1093,3 +1049,46 @@ figure {
   background-color: #000;
   padding: 1em 0;
   text-align: center; }
+
+.logo {
+  display: flex;
+  justify-content: center;
+  height: 100%; }
+  .logo__img {
+    display: block;
+    height: 100%; }
+
+.navbar {
+  background-color: #EC1C24; }
+
+.section__title {
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: #666; }
+  .section__title--footer {
+    font-weight: normal;
+    margin-bottom: -1rem;
+    font-size: 1.7em; }
+
+.section::after, .section::before {
+  content: '';
+  height: 3.2px;
+  position: absolute;
+  top: -2rem;
+  display: block; }
+
+.section::after {
+  left: 0;
+  width: 3rem;
+  background-color: #EC1C24; }
+
+.section::before {
+  right: 0;
+  background-color: #ccc;
+  width: calc(100% - 3rem - 5px); }
+
+.main-footer {
+  border-top: 6px solid #EC1C24; }
+
+.footer-nav {
+  background-color: #666; }
