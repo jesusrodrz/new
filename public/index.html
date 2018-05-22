@@ -42,12 +42,25 @@
       </nav>
       <section class="header-section--search-bar">
         <input class="search-bar__text" id="searchInput" type="text" name="searchInput" placeholder="¿Qué producto o marca estás buscando?">
-        <button class="search-bar__btn" id="searchBtn" type="submit"></button>
+        <button class="search-bar__btn" id="searchBtn" type="submit"><span class="icon-search"></span></button>
       </section>
-      <section class="header-section--chat"><a class="chat-btn" id="chatTrigger" href="#"><span class="chat-btn__text">¿Consultas? Chat Online</span></a></section>
+      <section class="header-section--chat"><a class="chat-btn" id="chatTrigger" href="#"><span class="chat-btn__text"><span class="icon-chat"></span> ¿Consultas? Chat Online</span></a></section>
     </header>
     <main class="main-content">
-      <section class="section banner-slider"></section>
+      <section class="slider" id="slider"><a class="slider__btn--right" id="sliderRight"></a><a class="slider__btn--left" id="sliderLeft"></a>
+        <article class="slider__item">
+          <figure class="slider__fig"><img class="slider__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnpwW7408D_nn-q464Sbz3XM1wWVZPhJIXSBkqDpSRQtMuUBWJ"/></figure>
+        </article>
+        <article class="slider__item">
+          <figure class="slider__fig"><img class="slider__img" src="https://cdn-images-1.medium.com/max/2000/1*r2AuXvDuxdRWCqvmBhlssw.png"/></figure>
+        </article>
+        <article class="slider__item">
+          <figure class="slider__fig"><img class="slider__img" src="http://www.printawallpaper.com/upload/vistas_dd.jpg"/></figure>
+        </article>
+        <article class="slider__item">
+          <figure class="slider__fig"><img class="slider__img" src="http://ak7.picdn.net/shutterstock/videos/5207747/thumb/1.jpg"/></figure>
+        </article>
+      </section>
       <section class="section categories">
         <h2 class="section__title">Categorías</h2>
         <article class="features-gallery">
@@ -122,7 +135,7 @@
     </main>
     <footer class="main-footer">
       <section class="footer-nav">
-        <div class="section--wrapper">
+        <div class="section--wrapper footer-nav__container">
           <nav class="footer-navbar">
             <ul class="menu-ft">
               <li class="menu-ft__item"><a class="menu-ft__link" href="#">Nosotros</a>
@@ -149,39 +162,42 @@
               </li>
             </ul>
           </nav>
-          <form class="form-subcribe" id="subcribe" action="subcribe" method="get">
-            <label class="form-subcribe__label" for="subcribe">Suscribete</label>
-            <input class="form-subcribe__text" id="subcribeText" type="text" name="subcribe">
-            <input class="form-subcribe__btn" id="subcribeBtn" type="submit" value="Suscribete">
-            <input class="form-subcribe__checkbox" id="subcribeCheckbox" type="checkbox" name="subcribe"><span class="form-subcribe__terms">Acepto los <a class="form-subcribe__link" href="#">terminos y condiciones</a></span>
-          </form>
+          <section class="subcribe">
+            <form class="form-subcribe" id="subcribe" action="subcribe" method="get">
+              <label class="form-subcribe__label" for="subcribe"> <span class="form-subcribe__span">Suscribete</span>
+                <input class="form-subcribe__text" id="subcribeText" type="email" name="subcribe" placeholder="Correo electrónico">
+                <button class="form-subcribe__btn" id="subcribeBtn" type="submit">Suscribete</button>
+              </label><span class="form-subcribe__terms">
+                <input class="form-subcribe__checkbox" id="subcribeCheckbox" type="checkbox" name="subcribe"> Acepto los <a class="form-subcribe__link" href="#">términos y condiciones</a></span>
+            </form>
+          </section>
         </div>
       </section>
       <section class="section--footer contact">
-        <div class="section--wrapper">
-          <h2 class="setion__title--footer">Contacto</h2>
+        <div class="section--wrapper contact__container">
+          <h2 class="section__title--footer">Contacto</h2>
           <form class="form-contact" id="contact" action="contact" method="get">
             <p class="form__description">Escribanos o llámenos. Estaremos en contacto con usted a la brevedad posible.</p>
             <label class="form-contact__label" for="contact_name">Nombre
-              <input class="form-contact__text" type="text" name="contact_name">
+              <input class="form-contact__text form-contact__input" type="text" name="contact_name">
             </label>
             <label class="form-contact__label" for="contact_email">E-mail
-              <input class="form-contact__text" type="email" name="contact_email">
+              <input class="form-contact__text form-contact__input" type="email" name="contact_email">
             </label>
             <label class="form-contact__label" for="contact_email">Consulta
-              <textarea class="form-contact__textarea" id="contactArea" name="contact_subject" cols="30" rows="10"></textarea>
+              <textarea class="form-contact__textarea form-contact__input" id="contactArea" name="contact_subject" cols="30" rows="10"></textarea>
             </label>
-            <input class="form-contact__btn" id="contactBtn" type="submit" value="Suscribete">
+            <button class="form-contact__btn" id="contactBtn" type="submit">Enviar</button>
           </form>
           <nav class="social-nav">
             <h3 class="social-nav__title">Siguenos</h3>
             <ul class="social-menu">
-              <li class="social-menu__item"><a class="social-menu__link" href="#">facebook</a></li>
-              <li class="social-menu__item"><a class="social-menu__link" href="#">twitter</a></li>
-              <li class="social-menu__item"><a class="social-menu__link" href="#">youtube</a></li>
+              <li class="social-menu__item"><a class="social-menu__link" href="#"> <span class="icon-facebook"></span></a></li>
+              <li class="social-menu__item"><a class="social-menu__link" href="#"> <span class="icon-youtube"></span></a></li>
+              <li class="social-menu__item"><a class="social-menu__link" href="#"> <span class="icon-twitter"></span></a></li>
             </ul>
           </nav>
-          <section class="fuature-list">
+          <section class="feature-list">
             <article class="feature-list__item">
               <h3 class="feature-list__title">Tienda Principal</h3>
               <address class="feature-list__element">Jr. Junin 774, Cercado de Lima</address>

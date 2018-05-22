@@ -1,0 +1,8 @@
+mixin slider(items)
+  section.slider#slider
+    a.slider__btn--right#sliderRight
+    a.slider__btn--left#sliderLeft
+    each item in items
+      article.slider__item
+        figure.slider__fig
+          img.slider__img(src=item)

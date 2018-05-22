@@ -10,6 +10,8 @@
 // Base and elements (generic)
 @import "base/normalize";
 @import "base/base";
+@import "base/flaticon";
+
 
 // LAYOUT
   // Escribe solo los estilos de layout (division en regiones del viewport)
@@ -23,6 +25,10 @@
 @import "components/gallerys";
 @import "components/search-bar";
 @import "components/blog-grid";
+@import "components/checkbox";
+@import "components/feature-list";
+@import "components/forms";
+@import "components/slider";
 
 // Theme (colors and fonts)
 @import "theme/typography";
@@ -31,3 +37,17 @@
   // Todos los hacks que hayas necesitado para solucionar conflictos
   // o resolver situaciones extremas. Se espera poder mejorarlos luego.
 @import "hacks/hacks";
+
+.social-nav{
+  &__title{
+    font-weight: normal;
+    color:rgb(223, 223, 223);
+  }
+}
+
+.copyright{
+  color: white;
+  background-color: #000;
+  padding: 1em 0;
+  text-align: center;
+}

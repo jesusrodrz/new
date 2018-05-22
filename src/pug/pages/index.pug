@@ -5,6 +5,7 @@ include ../includes/components/logo-gallery
 include ../includes/components/blog-grid
 include ../includes/components/navigation-secondary
 include ../includes/components/feature-list
+include ../includes/components/slider
 
 block metatags
   title Page Title
@@ -20,11 +21,7 @@ block main
   - var posts = [{postTitle:'Lorem ipsum dolor', postExcert:'lorem ipsum lorem dolor. Consectetur adipiscig elit',src:'#', postLink:'#'},{postTitle:'Lorem ipsum dolor', postExcert:'lorem ipsum lorem dolor. Consectetur adipiscig elit',src:'#', postLink:'#'},{postTitle:'Lorem ipsum dolor', postExcert:'lorem ipsum lorem dolor. Consectetur adipiscig elit',src:'#', postLink:'#'},{postTitle:'Lorem ipsum dolor', postExcert:'lorem ipsum lorem dolor. Consectetur adipiscig elit',src:'#', postLink:'#'}]
 
   - var footerNavItems = [{name:'Nosotros',url:'#',subMenu:[{name:'Historia',url:'#'},{name:'Instalaciones',url:'#'},{name:'Nuestros Clientes',url:'#'}]},{name:'Productos',url:'#',subMenu:[{name:'Categorías',url:'#'},{name:'Marcas',url:'#'},{name:'Reposición de productos',url:'#'},]},{name:'Blog',url:'#',subMenu:[{name:'Lanzamientos',url:'#'},{name:'Responsabilidad social',url:'#'},{name:'Tips y consejos',url:'#'},{name:'Eventos',url:'#'},]}]
-  //- header.main-header
-  //-   p 1
-  //-   p 2
-  //-   p 3
-  //-   p 4
+  - var slides = ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnpwW7408D_nn-q464Sbz3XM1wWVZPhJIXSBkqDpSRQtMuUBWJ','https://cdn-images-1.medium.com/max/2000/1*r2AuXvDuxdRWCqvmBhlssw.png','http://www.printawallpaper.com/upload/vistas_dd.jpg','http://ak7.picdn.net/shutterstock/videos/5207747/thumb/1.jpg'] 
   header.main-header
     figure.logo
       img.logo__img(src="https://www.payfast.co.za/storage/PayFast-logo.png", alt="page logo")
@@ -32,11 +29,13 @@ block main
     section.header-section--search-bar
       input#searchInput.search-bar__text(type="text", name="searchInput",placeholder='¿Qué producto o marca estás buscando?')
       button#searchBtn.search-bar__btn(type="submit")
+        span.icon-search
     section.header-section--chat
       a#chatTrigger.chat-btn(href='#')
-        span.chat-btn__text ¿Consultas? Chat Online
+        span.chat-btn__text #[span.icon-chat] ¿Consultas? Chat Online
   main.main-content
-    section.section.banner-slider
+    //- section.section.banner-slider hola
+    +slider(slides)
     section.section.categories
       h2.section__title Categorías
       +featureGallery(features)
@@ -48,34 +47,38 @@ block main
       +blogGrid(posts)
   footer.main-footer
     section.footer-nav
-      .section--wrapper
+      .section--wrapper.footer-nav__container
         +navBarSec(footerNavItems)
-        form.form-subcribe#subcribe(action="subcribe", method="get")
-          label.form-subcribe__label(for="subcribe") Suscribete
-          input.form-subcribe__text#subcribeText(type="text", name="subcribe")
-          input.form-subcribe__btn#subcribeBtn(type="submit", value="Suscribete")
-          input.form-subcribe__checkbox#subcribeCheckbox(type="checkbox", name="subcribe")
-          span.form-subcribe__terms.
-            Acepto los #[a.form-subcribe__link(href='#') terminos y condiciones]
+        section.subcribe
+          form.form-subcribe#subcribe(action="subcribe", method="get")
+            label.form-subcribe__label(for="subcribe") 
+              span.form-subcribe__span Suscribete
+              input.form-subcribe__text#subcribeText(type="email", name="subcribe",placeholder='Correo electrónico')
+              button.form-subcribe__btn#subcribeBtn(type="submit") Suscribete
+            span.form-subcribe__terms
+              input.form-subcribe__checkbox#subcribeCheckbox(type="checkbox", name="subcribe")
+              |  Acepto los #[a.form-subcribe__link(href='#') términos y condiciones]
     section.section--footer.contact
-      .section--wrapper
-        h2.setion__title--footer Contacto
+      .section--wrapper.contact__container
+        h2.section__title--footer Contacto
         form.form-contact#contact(action="contact", method="get")
           p.form__description Escribanos o llámenos. Estaremos en contacto con usted a la brevedad posible.
           label.form-contact__label(for="contact_name") Nombre
-            input.form-contact__text(type="text", name="contact_name")
+            input.form-contact__text.form-contact__input(type="text", name="contact_name")
           label.form-contact__label(for="contact_email") E-mail
-            input.form-contact__text(type="email", name="contact_email")
+            input.form-contact__text.form-contact__input(type="email", name="contact_email")
           label.form-contact__label(for="contact_email") Consulta
-            textarea#contactArea.form-contact__textarea(name="contact_subject", cols="30", rows="10")
-          input.form-contact__btn#contactBtn(type="submit", value="Suscribete")
+            textarea#contactArea.form-contact__textarea.form-contact__input(name="contact_subject", cols="30", rows="10")
+          button.form-contact__btn#contactBtn(type="submit") Enviar
         nav.social-nav
           h3.social-nav__title Siguenos
           ul.social-menu
-            -var links = {facebook:'#',twitter:'#', youtube:'#'}
+            -var links = {facebook:'#', youtube:'#',twitter:'#'}
             each link,index in links
               li.social-menu__item
-                a.social-menu__link(href=link) #{index}
+                a.social-menu__link(href=link) 
+                  span(class='icon-'+index)
+                  //- span(class='icon-#{index}') #{index}
         -var featuresList = [{title:'Tienda Principal',adress:'Jr. Junin 774, Cercado de Lima', tel:'(01) 426-0955', email:'ealvarex@uysa.com.pe'},{title:'Tienda de Plásticos',adress:'Jr. Paruro 642, Cercado de Lima', tel:'(01) 426-0955', email:'ealvarex@uysa.com.pe'},{title:'Showroom Miraflores',adress:'Calle Elías Aguirre 213, Miraflores', tel:'947229257', email:'dnakamura@uysa.com.pe'},{title:'Venta Institusional',adress:'Jr. Junin 774, Cercado de Lima', tel:'(01) 427-4049', email:'mychicawa@uysa.com.pe'},{title:'Ventas a Provincias',adress:'Jr. Junin 774, Cercado de Lima', tel:'(01) 427-1608', email:'salarcon@uysa.com.pe'},{title:'Compras',adress:'Jr. Junin 774, Cercado de Lima', tel:'(01) 428-3994', email:'jegoavil@uysa.com.pe'}]
 
         +featuresList(featuresList)

@@ -1,0 +1,18 @@
+.feature-list{
+  display: grid;
+  grid-gap: $gap;
+  grid-auto-flow: dense;
+  grid-template: {
+    columns: repeat(3,1fr);
+    // rows: repeat(3,1fr);
+  }
+  &__title{
+    font-weight: normal;
+    font-size: .95em;
+  }
+  &__element{
+    color:rgb(223, 223, 223);
+    font-size: .9em;
+    margin-bottom: .5em;
+  }
+}
