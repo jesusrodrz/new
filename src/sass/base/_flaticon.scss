@@ -3,23 +3,6 @@
     Creation date: 22/05/2018 00:54
     */
 
-    @font-face {
-  font-family: "Flaticon";
-  src: url("../Flaticon.eot");
-  src: url("../Flaticon.eot?#iefix") format("embedded-opentype"),
-       url("../Flaticon.woff") format("woff"),
-       url("../Flaticon.ttf") format("truetype"),
-       url("../Flaticon.svg#Flaticon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: "Flaticon";
-    src: url("F../laticon.svg#Flaticon") format("svg");
-  }
-}
 
     .fi:before{
         display: inline-block;
@@ -36,11 +19,6 @@
   font-smoothing: antialiased;
     }
 
-.icon-search:before { content: "\f100"; }
-.icon-chat:before { content: "\f101"; }
-.icon-twitter:before { content: "\f102"; }
-.icon-facebook:before { content: "\f103"; }
-.icon-youtube:before { content: "\f104"; }
     
     $font-Flaticon-musica-searcher: "\f100";
     $font-Flaticon-speech-bubbles: "\f101";
@@ -50,11 +28,11 @@
 
     @font-face {
       font-family: "Flaticon";
-      src: url("./../fonts/Flaticon.eot");
-      src: url("./../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
-           url("./../fonts/Flaticon.woff") format("woff"),
-           url("./../fonts/Flaticon.ttf") format("truetype"),
-           url("./../fonts/Flaticon.svg#Flaticon") format("svg");
+      src: url("./../fonts/icomoon.eot");
+      src: url("./../fonts/icomoon.eot?#iefix") format("embedded-opentype"),
+           url("./../fonts/icomoon.woff") format("woff"),
+           url("./../fonts/icomoon.ttf") format("truetype"),
+           url("./../fonts/icomoon.svg#Flaticon") format("svg");
       font-weight: normal;
       font-style: normal;
     }
@@ -62,7 +40,7 @@
     @media screen and (-webkit-min-device-pixel-ratio:0) {
       @font-face {
         font-family: "Flaticon";
-        src: url("./../fonts/Flaticon.svg#Flaticon") format("svg");
+        src: url("./../fonts/icomoon.svg#Flaticon") format("svg");
       }
     }
     
@@ -73,9 +51,14 @@
       font-style: normal;
     // margin-left: 20px;
     }
+
+    .icon-search:before { content: "\e900"; }
+    .icon-chat:before { content: "\e901"; }
+    .icon-twitter:before { content: "\e902"; }
+    .icon-facebook:before { content: "\e903"; }
+    .icon-youtube:before { content: "\e904"; }
+    .icon-cristal:before { content: "\e905"; }
+    .icon-olla:before { content: "\e906"; }
+    .icon-utencilio:before { content: "\e907"; }
+    .icon-vajilla:before { content: "\e908"; }
     
-    .flaticon-musica-searcher:before { content: "\f100"; }
-    .flaticon-speech-bubbles:before { content: "\f101"; }
-    .flaticon-social-media:before { content: "\f102"; }
-    .flaticon-facebook-logo:before { content: "\f103"; }
-    .flaticon-youtube-symbol:before { content: "\f104"; }    

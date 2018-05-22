@@ -12,3 +12,11 @@ $secondary-color-light: #ccc;
 
 // grid
 $gap: 16px;
+
+$breakpoints: (
+  xs: 24rem, //  384px
+  sm: 32rem, //  512px
+  md: 54rem, //  864px
+  lg: 64rem, //  1024px
+  xl: 80rem  //  1280px
+);
