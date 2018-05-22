@@ -708,15 +708,26 @@ figure {
   .features-gallery__fig {
     height: 100%;
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    position: relative;
+    z-index: -50; }
   .features-gallery__img {
-    display: inline-block;
+    display: block;
     height: 100%;
-    width: 100%; }
+    z-index: -60;
+    position: absolute; }
+    .features-gallery__img--3, .features-gallery__img--2 {
+      height: 200%;
+      top: -50%;
+      left: -70%; }
+    .features-gallery__img--1 {
+      height: 200%;
+      top: -1%;
+      left: -40%; }
   .features-gallery__logo {
     width: 70%;
     height: var(--item-height);

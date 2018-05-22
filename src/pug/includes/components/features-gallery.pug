@@ -1,8 +1,9 @@
 mixin featureGallery(items)
   article.features-gallery
-    each item in items
+    each item,index in items
+      -var nth = 1+index
       article.features-gallery__item
         h3.features-gallery__item-title() #{item.name}
         .features-gallery__logo
         figure.features-gallery__fig
-          img.features-gallery__img(src=item.src, alt=item.name)
+          img.features-gallery__img(class="features-gallery__img--"+nth, src=item.src, alt=item.name)

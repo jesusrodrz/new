@@ -14,9 +14,9 @@ block metatags
 block main
   - var navItems = [{name:'Inicio',url:'#'},{name:'Nosotros',url:'#',subMenu:[{name:'Historia',url:'#'},{name:'Instalaciones',url:'#'},{name:'Nuestros Clientes',url:'#'}]},{name:'Productos',url:'#',subMenu:[{name:'Categorías',url:'#'},{name:'Marcas',url:'#'},{name:'Reposición de productos',url:'#'},]},{name:'Blog',url:'#',subMenu:[{name:'Lanzamientos',url:'#'},{name:'Responsabilidad social',url:'#'},{name:'Tips y consejos',url:'#'},{name:'Eventos',url:'#'},]},{name:'Contacto',url:'#'}];
 
-  - var features = [{name:'Cristalería',src:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpXK5cF9dZGu2QGEUeyu5Hqsva9Zo92L-tiN9Gffv5AHPoF2uaOw'},{name:'Vajilla',src:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpXK5cF9dZGu2QGEUeyu5Hqsva9Zo92L-tiN9Gffv5AHPoF2uaOw'},{name:'Ollas y Sarténes',src:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpXK5cF9dZGu2QGEUeyu5Hqsva9Zo92L-tiN9Gffv5AHPoF2uaOw'},{name:'Utencilios de Cocina',src:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpXK5cF9dZGu2QGEUeyu5Hqsva9Zo92L-tiN9Gffv5AHPoF2uaOw'},{name:'Buffet',src:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpXK5cF9dZGu2QGEUeyu5Hqsva9Zo92L-tiN9Gffv5AHPoF2uaOw'},{name:'Repostería',src:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpXK5cF9dZGu2QGEUeyu5Hqsva9Zo92L-tiN9Gffv5AHPoF2uaOw'}]
+  - var features = [{name:'Cristalería',src:'img/cat-1.png'},{name:'Vajilla',src:'img/cat-2.png'},{name:'Ollas y Sarténes',src:'img/cat-3.png'},{name:'Utencilios de Cocina',src:'img/cat-4.png'},{name:'Buffet',src:'img/cat-5.png'},{name:'Repostería',src:'img/cat-6.png'}]
 
-  - var brands = [{name:'brand logo',src:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR55DXCWS-u-f-dkuZcDejekqNhlVYjgeISjlnCYz7WZKSsJORv'},{name:'brand logo',src:'http://posgrados.cicese.mx/img/logos/cicese.png'},{name:'brand logo',src:'https://staticaltmetric.s3.amazonaws.com/uploads/2015/10/dark-logo-for-site.png'},{name:'brand logo',src:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR55DXCWS-u-f-dkuZcDejekqNhlVYjgeISjlnCYz7WZKSsJORv'},{name:'brand logo',src:'http://posgrados.cicese.mx/img/logos/cicese.png'},{name:'brand logo',src:'https://staticaltmetric.s3.amazonaws.com/uploads/2015/10/dark-logo-for-site.png'}];
+  - var brands = [{name:'brand logo',src:'img/logo-1.png'},{name:'brand logo',src:'img/logo-2.png'},{name:'brand logo',src:'img/logo-3.png'},{name:'brand logo',src:'img/logo-4.png'},{name:'brand logo',src:'img/logo-5.png'},{name:'brand logo',src:'img/logo-6.png'}];
 
   - var posts = [{postTitle:'Lorem ipsum dolor', postExcert:'lorem ipsum lorem dolor. Consectetur adipiscig elit',src:'#', postLink:'#'},{postTitle:'Lorem ipsum dolor', postExcert:'lorem ipsum lorem dolor. Consectetur adipiscig elit',src:'#', postLink:'#'},{postTitle:'Lorem ipsum dolor', postExcert:'lorem ipsum lorem dolor. Consectetur adipiscig elit',src:'#', postLink:'#'},{postTitle:'Lorem ipsum dolor', postExcert:'lorem ipsum lorem dolor. Consectetur adipiscig elit',src:'#', postLink:'#'}]
 
@@ -24,7 +24,7 @@ block main
   - var slides = ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnpwW7408D_nn-q464Sbz3XM1wWVZPhJIXSBkqDpSRQtMuUBWJ','https://cdn-images-1.medium.com/max/2000/1*r2AuXvDuxdRWCqvmBhlssw.png','http://www.printawallpaper.com/upload/vistas_dd.jpg','http://ak7.picdn.net/shutterstock/videos/5207747/thumb/1.jpg'] 
   header.main-header
     figure.logo
-      img.logo__img(src="https://www.payfast.co.za/storage/PayFast-logo.png", alt="page logo")
+      img.logo__img(src="img/logo.png", alt="page logo")
     +navBar(navItems)
     section.header-section--search-bar
       input#searchInput.search-bar__text(type="text", name="searchInput",placeholder='¿Qué producto o marca estás buscando?')
