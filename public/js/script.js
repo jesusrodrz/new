@@ -39,6 +39,7 @@ window.addEventListener('resize', e => {
 
     scaleBtnWidth('chatTrigger', 1)
   }
+  placeholder()
 })
 
 function scaleBtnWidth(itemId, factor) {
@@ -68,4 +69,16 @@ function navBarMobileDisplay() {
     nav.classList.toggle('navbar--active')
   })
 
-} navBarMobileDisplay()
+}
+navBarMobileDisplay()
+function placeholder() {
+  // #searchInput
+  if (window.innerWidth < 720) {
+    const input = document.getElementById('searchInput')
+
+    input.setAttribute('placeholder', 'Buscar Productos')
+
+
+  }
+}
+placeholder()

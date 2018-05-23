@@ -64,10 +64,12 @@
 .section{
   // width: 90%;
   &__title{
+    font-family: Cardo;
     font-size: 1.8rem;
     font-weight: normal;
     color: $secondary-color;
     &--footer{
+      font-family: Cardo;
       font-weight: normal;
       margin-bottom: -1rem;
       font-size: 1.7em;
@@ -111,7 +113,19 @@
 }
 .footer-nav{
 
-  background-color: $secondary-color;
+  // background-color: $secondary-color;
+  // background-color: rgba($secondary-color,.2);
+  // background-image:url('./../img/footer-back.jpg');
+  background: url('./../img/footer-back.jpg') black ;
+  background-image: url('./../img/footer-back.jpg'),  linear-gradient(to right, rgba($secondary-color,.8), rgba($secondary-color,.9));
+  background-image: linear-gradient(to right, rgba($secondary-color,.93), rgba($secondary-color,.93)), url('./../img/footer-back.jpg');
+  // background-image: linear-gradient(to right, rgba($secondary-color,.8), rgba($secondary-color,.2));
+  // background: black ;
+  background-position: center left;
+  background-size: cover;
+  // background-repeat: no-repeat , no-repeat;
+  // background-size: 500px
+
 
 }
 .copyright{
@@ -119,6 +133,9 @@
   background-color: #000;
   padding: 1em 0;
   text-align: center;
+  font-size: 1.1em;
+  font-weight: lighter;
+  text-transform: uppercase;
 }
 .social-nav{
   &__title{
