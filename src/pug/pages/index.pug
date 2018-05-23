@@ -48,8 +48,11 @@ block main
       h2.section__title Categorías
       +featureGallery(features)
     section.section.brands
-      h2.section__title Marcas destacadas    
-      +logoGallery(brands)
+      h2.section__title Marcas destacadas
+      .slider-w
+        button#nextS.slider-w__btn   
+        button#prevS.slider-w__btn   
+        +logoGallery(brands)
     section.section.blog
       h2.section__title Visita nuestro blog    
       +blogGrid(posts)
