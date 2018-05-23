@@ -6,16 +6,41 @@
     // rows:var(--item-height);
   }
   grid-gap: $gap;
+  @include media(md){
+    grid-template: {
+      columns:repeat(2,1fr);
+      // rows:var(--item-height);
+    }
+  }
+  @include media(sm){
+    grid-template: {
+      columns:1fr;
+      // rows:var(--item-height);
+    }
+  }
 }
 
 .post{
   $text-color:#444;
   color: $text-color;
+  display: flex;
+  flex-direction: column;
+  @include media(md){
+    margin-bottom: $gap;
+  }
+  @include media(sm){
+    display: flex;
+    flex-direction: column;
+    &:not(:first-child){
+      display: none;
+    }
+  }
   &__fig{
 
     width: 100%;
     height: var(--item-height);
     background-color: $secondary-color_light;
+    overflow: hidden;
     
   }
   &__img{
@@ -26,10 +51,25 @@
   &__excert{
     height: 4rem;
     border-bottom: 1.5px solid $secondary-color_light;
+    @include media(sm){
+      
+      margin-bottom: 0;
+
+    } 
   }
   &__link{
     text-decoration: none;
     font-weight: bold;
     color: $text-color;
+    @include media(sm){
+      background-color: $primary-color;
+      color: white;
+      font-weight: normal;
+      padding: .7em 0em;
+      width: 120px;
+      text-transform: uppercase;
+      text-align: center;
+      align-self: flex-end;
+    } 
   }
 }

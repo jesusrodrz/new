@@ -1,5 +1,17 @@
 .search-bar{
+  display: flex;
+  justify-content: flex-end;
+  @include media(sm){
+    background-color: $secondary-color-light;
+    padding: $gap / 2;
+    justify-content: center;
 
+  }
+  &__wrapper{
+    position: relative;
+    width: 90%;
+
+  }
   &__text,&__btn{
     position: absolute;
     right: 0;
@@ -13,17 +25,37 @@
     width: 100%;
     background-color: $secondary-color-light;
     color:#000;
-    padding-left: 2rem
+    padding-left: 2rem;
+    @include media(sm){
+      background-color: white;
+      border-radius: 22px;
+      // height: calc(100% - #{$gap} );
+      // width: 90%;
+      // position: initial;
+      
+    }
   }
   &__text::placeholder{
     color:#000;
     opacity: 1;
+    
   }
+  
   &__btn{
     background-color: $secondary-color;
     width: 2.5rem;
+    // height: 2.5rem;
     cursor: pointer;
     color: white;
-    
+    @include media(sm){
+      $size:35px;
+      height: $size;
+      width: $size;
+      border-radius: $size / 2;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%); 
+      
+    }
   }
 }

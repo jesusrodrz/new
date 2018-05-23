@@ -15,4 +15,10 @@
     font-size: .9em;
     margin-bottom: .5em;
   }
+  @include media(md){
+    grid-template: {
+      columns: repeat(2,1fr);
+      // rows: repeat(3,1fr);
+    }
+  }
 }

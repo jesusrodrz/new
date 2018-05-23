@@ -9,10 +9,17 @@
     columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     
   }
+  @include media(md){
+    grid-template:{
+      columns: 1fr 1fr 1fr;
+      
+    }
+  }
   &__item-title{
     margin: 0;
     padding: .8em;
     text-align: center;
+    font-size: .6em;
     font-size: .8em;
     font-weight: 400; 
     text-transform: uppercase;
@@ -23,9 +30,13 @@
     border: solid 5px rgba(255, 255, 255,.3);
     background-size: contain;
     background-clip: padding-box;
+    @include media(sm){
+      background-color:transparent;
+      border: none;
+      bottom: 1em;
+    }
 
   }
-  
   
   &__item{
     position: relative;
@@ -45,6 +56,9 @@
     padding: 0;
     position: relative;
     z-index: -50;
+    @include media(sm){
+      display: none;
+    }
     
   }
   &__img{
@@ -71,7 +85,7 @@
     height: var(--item-height);
     border-radius: 50%;
     background-color: white;
-    transition: background-color ease .4s;
+    transition: all ease .4s;
     position: absolute;
     top: 50%;
     transform: translateY(-80%) translateX(-50%);
@@ -80,14 +94,24 @@
     justify-content: center;
     align-items: center;
     font-size: 3em;
-    color: darken($secondary-color-light,10);
+    color: darken($secondary-color-light,30);
+    @include media(sm){
+      border: 3px solid darken($secondary-color-light,30);
+      font-size: 2.5em;
+      background-color: lighten($secondary-color-light,15);
 
+    }
   }
   
   &__item:hover &__logo{ 
     background-color: $primary-color;
-    color: white
+    color: white;
+    @include media(sm){
+      border: 3px solid $primary-color;
+
+    }
   }
+  
 }
 
 
@@ -98,6 +122,12 @@
   padding: 0;
   display: flex;
   justify-content: space-between;
+  @include media(720px){
+    flex-wrap: wrap;
+  }
+  @include media(sm){
+    // flex-wrap: wrap;
+  }
   // margin:0 -$gap;
   // border: salmon solid 2px;
   &__fig{
@@ -113,13 +143,37 @@
     display: flex;
     align-items: center;
   
-    &:first-child{
+    &:last-child{
       margin-left: 0;
+      
     }
     &:last-child{
       margin-right: 0;
+      
     }
-
+    &:last-child,&:last-child{
+      @include media(md){
+        margin: 0 ($gap / 2);
+      }
+    }
+    @include media(720px){
+      flex-wrap: wrap;
+      $items-n:4;
+      width: (100% / $items-n);
+      // margin: ($gap / 2);
+    }
+    // @include media(md){
+    //   flex-wrap: wrap;
+    //   $items-n:4;
+    //   width: (100% / $items-n);
+    //   margin: ($gap / 2);
+    // }
+    // @include media(sm){
+    //   flex-wrap: wrap;
+    //   $items-n:2;
+    //   width: (100% / $items-n);
+    //   margin: ($gap / 2);
+    // }
   }
 
   &__img{

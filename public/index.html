@@ -10,7 +10,7 @@
   <body>
     <header class="main-header">
       <figure class="logo"><img class="logo__img" src="img/logo.png" alt="page logo"></figure>
-      <nav class="main-nav navbar">
+      <nav class="main-nav navbar" id="mainNav">
         <ul class="menu">
           <li class="menu__item"><a class="menu__link" href="#">Inicio</a>
           </li>
@@ -40,27 +40,13 @@
           </li>
         </ul>
       </nav>
-      <section class="header-section--search-bar">
-        <input class="search-bar__text" id="searchInput" type="text" name="searchInput" placeholder="¿Qué producto o marca estás buscando?">
-        <button class="search-bar__btn" id="searchBtn" type="submit"><span class="icon-search"></span></button>
-      </section>
-      <section class="header-section--chat"><a class="chat-btn" id="chatTrigger" href="#"><span class="chat-btn__text"><span class="icon-chat"></span> ¿Consultas? Chat Online</span></a></section>
+      <section class="header-section--search-bar search-bar"><span class="search-bar__wrapper">
+          <input class="search-bar__text" id="searchInput" type="text" name="searchInput" placeholder="¿Qué producto o marca estás buscando?">
+          <button class="search-bar__btn" id="searchBtn" type="submit"><span class="icon-search"></span></button></span></section>
+      <section class="header-section--chat"><a class="chat-btn" id="chatTrigger" href="#"><span class="chat-btn__text"><span class="icon-chat"></span><span class="chat-btn__span">¿Consultas? Chat Online</span></span></a><a class="nav-btn" id="navTrigger" href="#">
+          <div class="menu-icon"><span class="menu-icon__item"></span><span class="menu-icon__item"></span><span class="menu-icon__item"></span></div></a></section>
     </header>
     <main class="main-content">
-      <section class="slider" id="slider"><a class="slider__btn--right" id="sliderRight"></a><a class="slider__btn--left" id="sliderLeft"></a>
-        <article class="slider__item">
-          <figure class="slider__fig"><img class="slider__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnpwW7408D_nn-q464Sbz3XM1wWVZPhJIXSBkqDpSRQtMuUBWJ"/></figure>
-        </article>
-        <article class="slider__item">
-          <figure class="slider__fig"><img class="slider__img" src="https://cdn-images-1.medium.com/max/2000/1*r2AuXvDuxdRWCqvmBhlssw.png"/></figure>
-        </article>
-        <article class="slider__item">
-          <figure class="slider__fig"><img class="slider__img" src="http://www.printawallpaper.com/upload/vistas_dd.jpg"/></figure>
-        </article>
-        <article class="slider__item">
-          <figure class="slider__fig"><img class="slider__img" src="http://ak7.picdn.net/shutterstock/videos/5207747/thumb/1.jpg"/></figure>
-        </article>
-      </section>
       <section class="section categories">
         <h2 class="section__title">Categorías</h2>
         <article class="features-gallery">
