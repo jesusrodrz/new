@@ -7,7 +7,8 @@
 }
 function tinySlider() {
   if (window.innerWidth > 513) {
-    if (!slider) {
+    
+    if ( typeof slider === 'undefined') {
       
       const slider = tns({
         container: '.logo-gallery',
