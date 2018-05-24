@@ -100,7 +100,9 @@
 
 .slider-w{
   position: relative;
+  
   &__btn{
+    
     $btn-color: darken($secondary-color-light,20);
     $size:40px;
     $wd:6px;
@@ -113,6 +115,21 @@
     width: $size;
     background-color: transparent;
     cursor: pointer;
+    z-index: 300;
+    @include media (976px){
+      $size:25px;
+      height: $size;
+      width: $size;
+    }
+    @include media (md){
+      $size:16px;
+      height: $size;
+      width: $size;
+    }
+    @include media (sm){
+      display: none;
+    }
+   
     &:nth-child(1){
       // background-color: rebeccapurple;
       left: 100%;
@@ -120,6 +137,15 @@
       border-right: $wd solid $btn-color;
       border-left: $wd solid white;
       border-top: $wd solid white;
+      @include media (md){
+        border-bottom: 2px solid $btn-color;
+        border-right: 2px solid $btn-color;
+        border-left: 2px solid transparent;
+        border-top: 2px solid transparent;
+        left: unset;
+        right: 0;
+      }
+      
     }
     &:nth-child(2){
       // background-color: blueviolet;
@@ -128,7 +154,18 @@
       border-top: $wd solid $btn-color;
       border-bottom: $wd solid white;
       border-right: $wd solid white;
+      @include media (md){
+        border-left: 2px solid $btn-color;
+        border-top: 2px solid $btn-color;
+        border-bottom: 2px solid transparent;
+        border-right: 2px solid transparent;
+        left: 0;
+        right: unset;
+      }
+      
     }
+    
+    
   }
   
 }

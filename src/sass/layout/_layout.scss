@@ -38,8 +38,8 @@
   
   @include media(sm){
     grid-template:{
-      columns: 1fr var(--btn-width);
-      rows: 1fr 60px;
+      columns: 5fr 1fr;
+      rows: 80px 48px;
     }
     grid-gap:1px;
     &>:nth-child(1){

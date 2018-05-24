@@ -45,6 +45,7 @@
 .logo{
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 100%;
   padding: ($gap * 2) 0 $gap;
   // padding-top: $gap;
@@ -53,8 +54,15 @@
     // display: none;
     height: 100%;
     @include media(sm){
-      width: 100%;
-      height: auto;
+      
+      height: 100%;
+      
+    }
+    @include media(466px){
+      height: 40px;
+    }
+    @include media(400px){
+      height: 32px;
     }
   }
 }
@@ -114,19 +122,11 @@
 }
 .footer-nav{
 
-  // background-color: $secondary-color;
-  // background-color: rgba($secondary-color,.2);
-  // background-image:url('./../img/footer-back.jpg');
   background: url('./../img/footer-back.jpg') black ;
   background-image: url('./../img/footer-back.jpg'),  linear-gradient(to right, rgba($secondary-color,.8), rgba($secondary-color,.9));
   background-image: linear-gradient(to right, rgba($secondary-color,.93), rgba($secondary-color,.93)), url('./../img/footer-back.jpg');
-  // background-image: linear-gradient(to right, rgba($secondary-color,.8), rgba($secondary-color,.2));
-  // background: black ;
   background-position: center left;
   background-size: cover;
-  // background-repeat: no-repeat , no-repeat;
-  // background-size: 500px
-
 
 }
 .copyright{

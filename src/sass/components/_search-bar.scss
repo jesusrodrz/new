@@ -28,7 +28,7 @@
     padding-left: 2rem;
     @include media(sm){
       background-color: white;
-      border-radius: 22px;
+      border-radius: 16px;
       // height: calc(100% - #{$gap} );
       // width: 90%;
       // position: initial;
@@ -48,12 +48,13 @@
     cursor: pointer;
     color: white;
     @include media(sm){
-      $size:35px;
+      $size:26px;
       height: $size;
       width: $size;
       border-radius: $size / 2;
-      right: 5px;
+      right: 4px;
       top: 50%;
+      font-size: .9em;
       transform: translateY(-50%); 
       
     }
