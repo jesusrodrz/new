@@ -566,12 +566,15 @@ figure {
   display: grid;
   grid-gap: 16px;
   grid-template-columns: 1fr 1fr; }
-  @media (max-width: 32rem) {
+  @media (max-width: 720px) {
     .footer-nav__container {
       grid-template-columns: 1fr; } }
 
 .subcribe {
   justify-self: end; }
+  @media (max-width: 980px) {
+    .subcribe {
+      margin-left: 1em; } }
 
 .contact {
   background-color: #333;
@@ -1076,7 +1079,7 @@ figure {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap; }
-  @media (max-width: 32rem) {
+  @media (max-width: 720px) {
     .form-subcribe {
       margin: 1.5rem 0; } }
   .form-subcribe__text {

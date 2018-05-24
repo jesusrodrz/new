@@ -100,7 +100,7 @@
     grid-template: {
       columns: 1fr 1fr;
     }
-    @include media(sm){
+    @include media(720px){
       // display: block;
       grid-template: {
         columns: 1fr;
@@ -112,6 +112,9 @@
 
 .subcribe{
   justify-self: end;
+  @include media(980px){
+    margin-left: 1em;
+  }
 }
 
 .contact{

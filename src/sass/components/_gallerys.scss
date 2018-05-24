@@ -140,15 +140,10 @@
   }
   
   &__fig{
-    // flex: 0 0 calc((100% / #{$items-n}) - #{$gap});
-    // margin: 0 -8px;
+    
     margin: $gap / 2;
-    // margin: ;
     padding: $gap !important;
-    // margin: 0 ($gap / 2);
-    // width: (100% / $items-n);
     height: 30vh;
-    // max-height: 150px;
     border: 1.5px solid $secondary-color-light;
     display: flex !important;
     align-items: center !important;

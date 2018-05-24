@@ -77,7 +77,7 @@ window.addEventListener('resize', e => {
     scaleBtnWidth('chatTrigger', 1)
   }
   placeholder();
-  tinySlider()
+  // tinySlider()
 })
 
 function scaleBtnWidth(itemId, factor) {
@@ -102,7 +102,7 @@ function navBarMobileDisplay() {
 
   trigger.addEventListener('click', e => {
     const icon = document.querySelector('.menu-icon')
-    console.log(e.target, icon)
+    // console.log(e.target, icon)
     icon.classList.toggle('menu-icon--active')
     nav.classList.toggle('navbar--active')
   })
