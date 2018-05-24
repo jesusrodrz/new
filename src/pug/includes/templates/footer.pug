@@ -1,0 +1,45 @@
+include ../components/navigation-secondary
+include ../components/feature-list
+- var footerNavItems = [{name:'Nosotros',url:'#',subMenu:[{name:'Historia',url:'#'},{name:'Instalaciones',url:'#'},{name:'Nuestros Clientes',url:'#'}]},{name:'Productos',url:'#',subMenu:[{name:'Categorías',url:'#'},{name:'Marcas',url:'#'},{name:'Reposición de productos',url:'#'},]},{name:'Blog',url:'#',subMenu:[{name:'Lanzamientos',url:'#'},{name:'Responsabilidad social',url:'#'},{name:'Tips y consejos',url:'#'},{name:'Eventos',url:'#'},]}]
+
+footer.main-footer
+  section.footer-nav
+    .section--wrapper.footer-nav__container
+      +navBarSec(footerNavItems)
+      section.subcribe
+        form.form-subcribe#subcribe(action="subcribe", method="get")
+          label.form-subcribe__label(for="subcribe") 
+            span.form-subcribe__span Suscribete
+            input.form-subcribe__text#subcribeText(type="email", name="subcribe",placeholder='Correo electrónico')
+            button.form-subcribe__btn#subcribeBtn(type="submit") Suscribete
+          span.form-subcribe__terms
+            input.form-subcribe__checkbox#subcribeCheckbox(type="checkbox", name="subcribe")
+            |  Acepto los #[a.form-subcribe__link(href='#') términos y condiciones]
+  section.section--footer.contact
+    .section--wrapper.contact__container
+      h2.section__title--footer Contacto
+      form.form-contact#contact(action="contact", method="get")
+        p.form__description Escribanos o llámenos. Estaremos en contacto con usted a la brevedad posible.
+        label.form-contact__label(for="contact_name") Nombre
+          input.form-contact__text.form-contact__input(type="text", name="contact_name")
+        label.form-contact__label(for="contact_email") E-mail
+          input.form-contact__text.form-contact__input(type="email", name="contact_email")
+        label.form-contact__label(for="contact_email") Consulta
+          textarea#contactArea.form-contact__textarea.form-contact__input(name="contact_subject", cols="1", rows="10")
+        button.form-contact__btn#contactBtn(type="submit") Enviar
+      nav.social-nav
+        h3.social-nav__title Siguenos
+        ul.social-menu
+          -var links = {facebook:'#', youtube:'#',twitter:'#'}
+          each link,index in links
+            li.social-menu__item
+              a.social-menu__link(href=link) 
+                span(class='icon-'+index)
+                //- span(class='icon-#{index}') #{index}
+      -var featuresList = [{title:'Tienda Principal',adress:'Jr. Junin 774, Cercado de Lima', tel:'(01) 426-0955', email:'ealvarex@uysa.com.pe'},{title:'Tienda de Plásticos',adress:'Jr. Paruro 642, Cercado de Lima', tel:'(01) 426-0955', email:'ealvarex@uysa.com.pe'},{title:'Showroom Miraflores',adress:'Calle Elías Aguirre 213, Miraflores', tel:'947229257', email:'dnakamura@uysa.com.pe'},{title:'Venta Institusional',adress:'Jr. Junin 774, Cercado de Lima', tel:'(01) 427-4049', email:'mychicawa@uysa.com.pe'},{title:'Ventas a Provincias',adress:'Jr. Junin 774, Cercado de Lima', tel:'(01) 427-1608', email:'salarcon@uysa.com.pe'},{title:'Compras',adress:'Jr. Junin 774, Cercado de Lima', tel:'(01) 428-3994', email:'jegoavil@uysa.com.pe'}]
+
+      +featuresList(featuresList)
+  section.section--footer.copyright
+    .section--wrapper
+      small.copyright__text Unión Ychicawa - 2018 Todos lo Derechos Reservados 
+        
