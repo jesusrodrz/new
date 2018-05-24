@@ -902,7 +902,7 @@ figure {
       display: grid;
       grid-gap: 16px;
       grid-template-columns: repeat(3, 1fr); } }
-  @media (max-width: null) {
+  @media (max-width: 24rem) {
     .logo-gallery {
       display: grid;
       grid-template-columns: repeat(2, 1fr); } }
@@ -1173,7 +1173,9 @@ figure {
     margin-top: .3em;
     border: none;
     outline: none;
-    padding: .5em; }
+    padding: .5em;
+    max-width: 100%;
+    width: 100%; }
   .form-contact__textarea {
     height: 4.5rem;
     height: 7rem; }
