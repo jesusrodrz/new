@@ -10,19 +10,19 @@ function tinySlider() {
     
     if ( typeof slider === 'undefined') {
       
-      const slider = tns({
-        container: '.logo-gallery',
-        items: 5,
-        slideBy: '1',
-        autoplay: true,
-        controls: true,
-        // gutter: 16,
-        nav:false
+      if (document.querySelector('.logo-gallery')) {
+        const slider = tns({
+          container: '.logo-gallery',
+          items: 5,
+          slideBy: '1',
+          autoplay: true,
+          controls: true,
+          // gutter: 16,
+          nav: false
         }),
-        next=document.getElementById('nextS'),
-        prev = document.getElementById('prevS')
-      if (slider) {
-          
+          next = document.getElementById('nextS'),
+          prev = document.getElementById('prevS');
+      
         slider.play();
         prev.parentElement.addEventListener('click', e => {
           if (e.target===prev) {
@@ -101,7 +101,6 @@ function scaleBtnWidth(itemId, factor) {
   const height = window.getComputedStyle(item).getPropertyValue("height"),
     width = (parseFloat(height, 10) * factor) + 'px';
   // item.style.width = width;
-  console.log(height, width, item)
   item.style.setProperty("--btn-width", width)
 
 }

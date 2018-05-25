@@ -154,8 +154,11 @@
 
   display: flex;
   justify-content: space-between;
-  // margin:0 -$gap;
-  // border: salmon solid 2px;
+  
+  &--single{
+    @extend .logo-gallery;
+    
+  }
   @include media(720px){
   }
   @include media(sm){
@@ -204,3 +207,5 @@
 
 
 }
+
+

@@ -11,28 +11,30 @@ block main
               span.icon-cristal
             h1.navbar-cat__title Cristelería
             +menuCat(catLinks)
-    article.single-item
+    article.single-item.section--not
       section.single-item__section
-        h2.single-item__title
-        p.single-item__p
+        h2.single-item__title.section__title Vaso largo,high ball o tumbler
+        p.single-item__p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas quam, architecto quibusdam error, repudiandae obcaecati suscipit quisquam quos, ipsam incidunt facere ducimus. Animi explicabo debitis quia magnam, accusamus molestiae sit.
+        p.single-item__p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas quam, architecto quibusdam error, repudiandae obcaecati suscipit quisquam quos, ipsam incidunt facere ducimus. Animi explicabo debitis quia magnam, accusamus molestiae sit.
+
       section.single-item__section
         h3.single-item__sub-title Selecione una marca
-        - var items = ['img/cristar.png','img/pirex.png','img/luminarce.png']
-        acticle.logo-gallery
+        - var items = ['img/cristar.png','img/pyrex.png','img/luminarce.png']
+        acticle.logo-gallery--single
           each item in items
-            figure.logo-gallery__fig
-              img.logo-gallery__img(src=item)
+            figure.logo-gallery__fig--single
+              img.logo-gallery__img--single(src=item)
         a.single-item__btn(href="#") Ver Catálogo
       section.single-item__section
         article.lightbox
           figure.lightbox__screen
-            img.lightbox__img(src="Capa1.png", alt="")
+            img.lightbox__img(src="img/Capa1.png", alt="")
           figure.lightbox__item
-            img.lightbox__img(src="Capa2.png", alt="")
+            img.lightbox__img(src="img/Capa2.png", alt="")
           figure.lightbox__item
-            img.lightbox__img(src="Capa3.png", alt="")  
+            img.lightbox__img(src="img/Capa3.png", alt="")  
           figure.lightbox__item
-            img.lightbox__img(src="Capa4.png", alt="")  
+            img.lightbox__img(src="img/Capa4.png", alt="")  
           figure.lightbox__item
-            img.lightbox__img(src="Capa5.png", alt="") 
+            img.lightbox__img(src="img/Capa5.png", alt="") 
           

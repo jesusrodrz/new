@@ -33,6 +33,7 @@
 @import "components/tiny-slider";
 @import "components/banner";
 @import "components/logo-cat";
+@import "components/lightbox";
 
 // Theme (colors and fonts)
 @import "theme/typography";
@@ -108,6 +109,7 @@
     width: calc(100% - 3rem - 5px);
   }
   &--not{
+    @extend .section ;
     &::after,&::before{
       
       display: none;
@@ -157,4 +159,30 @@
   background-position: center left;
   background-size: cover;
   padding: 3em 5em;
+}
+
+.single-item{
+  &__section{
+
+  }
+  &__title{
+    color: darken($secondary-color,10);
+    position: relative;
+    margin-bottom: 2em;
+    @extend %undenline-section;
+  }
+
+}
+
+%undenline-section{
+  &::before{
+    @extend .section::before;
+  }
+  &::after{
+    @extend .section::after;
+  }
+  &::before,&::after{
+    top: unset;
+    bottom: -1em;
+  }
 }

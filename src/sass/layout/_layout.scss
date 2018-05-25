@@ -166,3 +166,28 @@
     
   }
 }
+
+
+.single-item{
+  display: grid;
+  grid-gap: $gap;
+  grid-template:{
+
+    columns: 7fr 5fr;
+    rows:1fr 1fr;
+  } 
+  &>:last-child{
+    grid-column: 1 / 2;
+    grid-row: 1 / span 2;
+  }
+  @include media(md){
+    grid-template-columns: 1fr 1fr;
+  }
+  @include media(sm){
+    grid-template-columns: 1fr;
+    &>:last-child{
+      grid-column: 1 / 2;
+      grid-row: 2 / span 1;
+    }
+  }
+}
