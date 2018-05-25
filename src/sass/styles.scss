@@ -152,8 +152,8 @@
 .description{
   // background: url('./../img/banner-back.jpg') black ;
   // background-image: url('./../img/banner-back.jpg'),  linear-gradient(to right, rgba($secondary-color-light,1), rgba($secondary-color,.9));
-  background-image: url('./../img/banner-back.png');
-  background-image: linear-gradient(to right, rgba($secondary-color-light,1), rgba($secondary-color-light,.2)), url('./../img/banner-back.jpg');
+  background-image: url('./../img/b-back.png');
+  background-image: linear-gradient(to right, rgba($secondary-color-light,1), rgba($secondary-color-light,.2)), url('./../img/b-back.jpg');
   $gradient:lighten($secondary-color-light,15);
   background-image: linear-gradient(to right, rgba($gradient,1) 0%,rgba($gradient,1)40%, rgba($gradient,0.8) 100%),linear-gradient(to right, rgba($gradient,.5), rgba($gradient,.5)), url(./../img/banner-back.png);
   background-position: center left;
@@ -162,19 +162,29 @@
 }
 
 .single-item{
+  
   &__section{
 
   }
   &__title{
     color: darken($secondary-color,10);
-    position: relative;
-    margin-bottom: 2em;
     @extend %undenline-section;
   }
-
+  &__btn{
+    display: inline-block;
+    padding: .8em $gap;
+    background-color: $secondary-color-dark;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    // margin-top: $gap;
+  }
 }
 
+
 %undenline-section{
+  position: relative;
+  margin-bottom: 2em;
   &::before{
     @extend .section::before;
   }
@@ -185,4 +195,12 @@
     top: unset;
     bottom: -1em;
   }
+}
+
+.logo-gallery--single{
+  @extend %undenline-section;
+  padding: $gap 0;
+}
+.icon-spacing{
+  margin-right: 8px;
 }

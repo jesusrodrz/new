@@ -174,11 +174,11 @@
   grid-template:{
 
     columns: 7fr 5fr;
-    rows:1fr 1fr;
-  } 
+    rows: repeat(5,fit-content(100px))
+  }
   &>:last-child{
     grid-column: 1 / 2;
-    grid-row: 1 / span 2;
+    grid-row: 1 / span 4;
   }
   @include media(md){
     grid-template-columns: 1fr 1fr;
