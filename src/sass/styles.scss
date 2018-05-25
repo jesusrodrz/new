@@ -31,6 +31,8 @@
 @import "components/forms";
 @import "components/slider";
 @import "components/tiny-slider";
+@import "components/banner";
+@import "components/logo-cat";
 
 // Theme (colors and fonts)
 @import "theme/typography";
@@ -87,9 +89,10 @@
       }
     }
   }
+ 
   &::after,&::before{
     content: '';
-    height: 3.2px;
+    height: 5px;
     position: absolute;
     top: -2rem;
     display: block;
@@ -104,17 +107,13 @@
     background-color: $secondary-color-light;
     width: calc(100% - 3rem - 5px);
   }
+  &--not{
+    &::after,&::before{
+      
+      display: none;
+    }
+  }
 }
-
-// .header-section{
-//   &--search-bar{
-//     @include media(xs){
-//       background-color: $secondary-color-light;
-//       padding: $gap / 2;
-//     }
-//   }
-  
-// }
 
 .main-footer{
   border-top: 6px solid $primary-color;
@@ -146,8 +145,16 @@
       text-align: center;
     }
   }
-  // @include media(sm){
-  // }
 }
 
-
+.description{
+  // background: url('./../img/banner-back.jpg') black ;
+  // background-image: url('./../img/banner-back.jpg'),  linear-gradient(to right, rgba($secondary-color-light,1), rgba($secondary-color,.9));
+  background-image: url('./../img/banner-back.png');
+  background-image: linear-gradient(to right, rgba($secondary-color-light,1), rgba($secondary-color-light,.2)), url('./../img/banner-back.jpg');
+  $gradient:lighten($secondary-color-light,15);
+  background-image: linear-gradient(to right, rgba($gradient,1) 0%,rgba($gradient,1)40%, rgba($gradient,0.8) 100%),linear-gradient(to right, rgba($gradient,.5), rgba($gradient,.5)), url(./../img/banner-back.png);
+  background-position: center left;
+  background-size: cover;
+  padding: 3em 5em;
+}

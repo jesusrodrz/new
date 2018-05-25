@@ -1,18 +1,22 @@
 extends ../includes/template
 include ../includes/components/menu-cat
 include ../includes/components/features-gallery
+include ../includes/components/logo-cat
 block main
   - var catLinks = [{name:'Productos',url:'#'},{name:'Categorías',url:'#'},{name:'Cristalería',url:'#'}];
   - var features = [{name:'Vasos',src:'img/vasos.png'},{name:'Copas',src:'img/copas.png'},{name:'Jarras',src:'img/jarras.png'},{name:'Fuentes',src:'img/fuentes.png'},{name:'Chop',src:'img/chop.png'},{name:'Botellas',src:'img/botellas.png'}]
+  - var logos = [{src:'img/cristar.png',url:'#'},{src:'img/figueiredo.png',url:'#'},{src:'img/luminarce.png',url:'#'},{src:'img/marinex2.png',url:'#'},{src:'img/pyrex.png',url:'#'}]
   
   main.main-content
     section.banner
-      nav.navbar-cat
-        figure.navbar-cat__fig
-          span.icon-cristal
-        h1.navbar-cat__title Cristalería
-        +menuCat(catLinks)
-    secion.section
+      .banner__container
+        nav.navbar-cat.section--wrapper
+            figure.navbar-cat__fig
+              span.icon-cristal
+            h1.navbar-cat__title Cristelería
+            +menuCat(catLinks)
+    section.section.section--not
+      h2.section__title Productos
       article.description
         p.decription__p
           |Copas en todas sus variedades: para agua, vino tinto, pisco, champagne, martini, margarita, copa pera, etc. En todos los tamaños y distintas líneas.
@@ -21,3 +25,7 @@ block main
     section.section
       h2.section__title Productos
       +featureGallery(features,'features-gallery','--subcat')
+    section.section
+      h2.section__title Marcas
+      +logoCat(logos)
+      

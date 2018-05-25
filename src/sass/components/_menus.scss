@@ -1,8 +1,6 @@
 .navbar{
   
   @include media(sm){
-
-    // display: none;
     position: absolute;
     top:80px;
     bottom: 0;
@@ -162,4 +160,71 @@
     }
   }
 
+}
+
+.navbar-cat{
+  display: flex;
+  align-items: center;
+  height: 80px;
+  @include media(540px){
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }  
+  &>:last-child{
+    margin-left: auto;
+    @include media(540px){
+      margin-left: 0;
+      margin-bottom: $gap;
+    }
+  }
+  &__title{
+    // @extend .section__title;
+    font-size: 2em;
+    font-family: cardo;
+    font-weight: normal;
+    color: #2c2c2c;
+    margin-left: $gap;
+  }
+  &__fig{
+    $size:50px;
+    height: $size;
+    width: $size;
+    background-color: $primary-color;
+    border-radius: $size / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+  }
+}
+.menu-cat{
+  ul,&{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  display: flex;
+  &__item{
+    margin-left:6px;
+    &:not(:first-child)::before{
+      content: '/';
+    }
+    color: darken($secondary-color,10);
+    &:not(:last-child){
+      a{
+      color: darken($secondary-color,10);
+      text-decoration: none;
+      }
+    }
+  }
+  &__link{
+    text-transform: uppercase;
+    color: darken($secondary-color,80);
+    font-size: .9em;
+    
+   
+  }
 }

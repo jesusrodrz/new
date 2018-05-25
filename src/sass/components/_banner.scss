@@ -1,0 +1,15 @@
+.banner{
+  height: 250px;
+  background-image: url('./../img/banner-back.png');
+  background-size: cover;
+  background-position: 0;
+  border-top: solid 15px rgba(#000,.2);
+  border-bottom: 5px $primary-color solid;
+  display: flex;
+  flex-flow: column-reverse;
+  &__container{
+    background-color: rgba(#fff,.8);
+    border-top: solid 15px rgba(#000,.2);
+    background-clip: padding-box;
+  }
+}

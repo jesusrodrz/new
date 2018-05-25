@@ -1,6 +1,7 @@
 
 .main-header{
   display: grid;
+  margin-bottom: $gap;
   grid-template:{
     columns: 4fr 2fr;
     rows: 100px 4rem 2.5rem;
@@ -74,6 +75,11 @@
 
 
 .section{
+  
+  &--wrapper{
+    width: 100%;
+    margin: auto
+  }
   &,&--wrapper{
     max-width: 1200px;
     @include media(1250px){
@@ -82,9 +88,6 @@
     @include media(md){
       width: 95%;
     }
-  }
-  &--wrapper{
-    margin: auto
   }
 
   position: relative;

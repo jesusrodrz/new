@@ -1,0 +1,7 @@
+mixin logoCat(items)
+  article.logo-cat
+    each item in items
+      article.logo-cat__item
+        figure.logo-cat__fig
+          img.logo-cat__img(src=item.src)
+        a.logo-cat__btn(href=item.url) Ver Catálogo

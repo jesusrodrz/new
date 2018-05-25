@@ -63,18 +63,22 @@ function scaleHeightM(itemClass, factor = 1) {
   })
 }
 scaleHeight('features-gallery__item', 2)
+scaleHeight('features-gallery__item--subcat', 1)
 if (window.innerWidth < 513) {
 
   scaleHeight('features-gallery__item', 1.4)
+  scaleHeight('features-gallery__item--subcat', 1)
 }
 // scaleHeight('post', 1.2)
 scaleHeightM('features-gallery__logo')
 scaleHeightM('post__fig', .6)
 window.addEventListener('resize', e => {
   scaleHeight('features-gallery__item', 2)
+  scaleHeight('features-gallery__item--subcat', 1)
   if (window.innerWidth < 513) {
 
     scaleHeight('features-gallery__item', 1.4)
+    scaleHeight('features-gallery__item--subcat', 1)
   }
   // scaleHeight('post', 1.2)
   scaleHeightM('features-gallery__logo')
