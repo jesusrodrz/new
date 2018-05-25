@@ -1,10 +1,13 @@
-mixin featureGallery(items)
-  article.features-gallery
+mixin featureGallery(items,itemClass='features-gallery',modifier='')
+  //- if modifier == undfined
+  //-   - modifier=''
+  article(class=itemClass+modifier)
     each item,index in items
       -var nth = 1+index
-      article.features-gallery__item
-        h3.features-gallery__item-title() #{item.name}
-        .features-gallery__logo
-          span(class='icon-'+item.icon)
-        figure.features-gallery__fig
-          img.features-gallery__img(class="features-gallery__img--"+nth, src=item.src, alt=item.name)
+      article(class=itemClass+'__item'+modifier)
+        h3(class=itemClass+'-title'+modifier) #{item.name}
+        if item.icon
+          div(class=itemClass+'__logo'+modifier)
+            span(class='icon-'+item.icon)
+        figure(class=itemClass+'__fig'+modifier)
+          img(class=itemClass+'__img'+modifier,class=itemClass+"__img--"+modifier+nth, src=item.src, alt=item.name)
