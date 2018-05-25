@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Page Title</title>
-    <meta name="description" content="description">
   </head>
   <body>
     <header class="main-header">
@@ -47,78 +45,49 @@
           <div class="menu-icon"><span class="menu-icon__item"></span><span class="menu-icon__item"></span><span class="menu-icon__item"></span></div></a></section>
     </header>
     <main class="main-content">
-      <section class="section categories">
-        <h2 class="section__title">Categorías</h2>
-        <article class="features-gallery">
-          <article class="features-gallery__item">
-            <h3 class="features-gallery-title">Cristalería</h3>
-            <div class="features-gallery__logo"><span class="icon-cristal"></span></div>
-            <figure class="features-gallery__fig"><img class="features-gallery__img features-gallery__img--1" src="img/cat-1.png" alt="Cristalería"/></figure>
-          </article>
-          <article class="features-gallery__item">
-            <h3 class="features-gallery-title">Vajilla</h3>
-            <div class="features-gallery__logo"><span class="icon-vajilla"></span></div>
-            <figure class="features-gallery__fig"><img class="features-gallery__img features-gallery__img--2" src="img/cat-2.png" alt="Vajilla"/></figure>
-          </article>
-          <article class="features-gallery__item">
-            <h3 class="features-gallery-title">Ollas y Sarténes</h3>
-            <div class="features-gallery__logo"><span class="icon-olla"></span></div>
-            <figure class="features-gallery__fig"><img class="features-gallery__img features-gallery__img--3" src="img/cat-3.png" alt="Ollas y Sarténes"/></figure>
-          </article>
-          <article class="features-gallery__item">
-            <h3 class="features-gallery-title">Utencilios de Cocina</h3>
-            <div class="features-gallery__logo"><span class="icon-utencilio"></span></div>
-            <figure class="features-gallery__fig"><img class="features-gallery__img features-gallery__img--4" src="img/cat-4.png" alt="Utencilios de Cocina"/></figure>
-          </article>
-          <article class="features-gallery__item">
-            <h3 class="features-gallery-title">Buffet</h3>
-            <div class="features-gallery__logo"><span class="icon-vajilla"></span></div>
-            <figure class="features-gallery__fig"><img class="features-gallery__img features-gallery__img--5" src="img/cat-5.png" alt="Buffet"/></figure>
-          </article>
-          <article class="features-gallery__item">
-            <h3 class="features-gallery-title">Repostería</h3>
-            <div class="features-gallery__logo"><span class="icon-olla"></span></div>
-            <figure class="features-gallery__fig"><img class="features-gallery__img features-gallery__img--6" src="img/cat-6.png" alt="Repostería"/></figure>
-          </article>
+      <section class="banner">
+        <nav class="navbar-cat">
+          <figure class="navbar-cat__fig"><span class="icon-cristal"></span></figure>
+          <h1 class="navbar-cat__title">Cristalería</h1>
+          <ul class="menu-cat">
+            <li class="menu-cat__item"><a class="menu-cat__link" href="#">Productos</a></li>
+            <li class="menu-cat__item"><a class="menu-cat__link" href="#">Categorías</a></li>
+            <li class="menu-cat__item"><a class="menu-cat__link" href="#">Cristalería</a></li>
+          </ul>
+        </nav>
+      </section>
+      <secion class="section">
+        <article class="description">
+          <p class="decription__p">Copas en todas sus variedades: para agua, vino tinto, pisco, champagne, martini, margarita, copa pera, etc. En todos los tamaños y distintas líneas.</p>
+          <p class="decription__p">Vasos en todas las variedades: para agua, cocktail, whisky, capuchino, cerveza, chopp cervecero,shots, etc. En todos los tamaños y distintas líneas. Jarras, hieleras, licoreras, garrafas en fina cristalería.</p>
         </article>
-      </section>
-      <section class="section brands">
-        <h2 class="section__title">Marcas destacadas</h2>
-        <div class="slider-w">
-          <button class="slider-w__btn" id="nextS">  </button>
-          <button class="slider-w__btn" id="prevS">  </button>
-          <article class="logo-gallery">
-            <figure class="logo-gallery__fig"><img class="logo-gallery__img" src="img/logo-1.png" alt="brand logo"/></figure>
-            <figure class="logo-gallery__fig"><img class="logo-gallery__img" src="img/logo-2.png" alt="brand logo"/></figure>
-            <figure class="logo-gallery__fig"><img class="logo-gallery__img" src="img/logo-3.png" alt="brand logo"/></figure>
-            <figure class="logo-gallery__fig"><img class="logo-gallery__img" src="img/logo-4.png" alt="brand logo"/></figure>
-            <figure class="logo-gallery__fig"><img class="logo-gallery__img" src="img/logo-5.png" alt="brand logo"/></figure>
-            <figure class="logo-gallery__fig"><img class="logo-gallery__img" src="img/logo-6.png" alt="brand logo"/></figure>
+      </secion>
+      <section class="section">
+        <h2 class="section__title">Productos</h2>
+        <article class="features-gallery--subcat">
+          <article class="features-gallery__item--subcat">
+            <h3 class="features-gallery-title--subcat">Vasos</h3>
+            <figure class="features-gallery__fig--subcat"><img class="features-gallery__img--subcat features-gallery__img----subcat1" src="img/vasos.png" alt="Vasos"/></figure>
           </article>
-        </div>
-      </section>
-      <section class="section blog">
-        <h2 class="section__title">Visita nuestro blog    </h2>
-        <article class="blog-grid">
-          <article class="post">
-            <figure class="post__fig"><img class="post__img" src="#" alt="Lorem ipsum dolor"/></figure>
-            <h3 class="post__title">Lorem ipsum dolor</h3>
-            <p class="post__excert">lorem ipsum lorem dolor. Consectetur adipiscig elit</p><a class="post__link" href="#">Ver más</a>
+          <article class="features-gallery__item--subcat">
+            <h3 class="features-gallery-title--subcat">Copas</h3>
+            <figure class="features-gallery__fig--subcat"><img class="features-gallery__img--subcat features-gallery__img----subcat2" src="img/copas.png" alt="Copas"/></figure>
           </article>
-          <article class="post">
-            <figure class="post__fig"><img class="post__img" src="#" alt="Lorem ipsum dolor"/></figure>
-            <h3 class="post__title">Lorem ipsum dolor</h3>
-            <p class="post__excert">lorem ipsum lorem dolor. Consectetur adipiscig elit</p><a class="post__link" href="#">Ver más</a>
+          <article class="features-gallery__item--subcat">
+            <h3 class="features-gallery-title--subcat">Jarras</h3>
+            <figure class="features-gallery__fig--subcat"><img class="features-gallery__img--subcat features-gallery__img----subcat3" src="img/jarras.png" alt="Jarras"/></figure>
           </article>
-          <article class="post">
-            <figure class="post__fig"><img class="post__img" src="#" alt="Lorem ipsum dolor"/></figure>
-            <h3 class="post__title">Lorem ipsum dolor</h3>
-            <p class="post__excert">lorem ipsum lorem dolor. Consectetur adipiscig elit</p><a class="post__link" href="#">Ver más</a>
+          <article class="features-gallery__item--subcat">
+            <h3 class="features-gallery-title--subcat">Fuentes</h3>
+            <figure class="features-gallery__fig--subcat"><img class="features-gallery__img--subcat features-gallery__img----subcat4" src="img/fuentes.png" alt="Fuentes"/></figure>
           </article>
-          <article class="post">
-            <figure class="post__fig"><img class="post__img" src="#" alt="Lorem ipsum dolor"/></figure>
-            <h3 class="post__title">Lorem ipsum dolor</h3>
-            <p class="post__excert">lorem ipsum lorem dolor. Consectetur adipiscig elit</p><a class="post__link" href="#">Ver más</a>
+          <article class="features-gallery__item--subcat">
+            <h3 class="features-gallery-title--subcat">Chop</h3>
+            <figure class="features-gallery__fig--subcat"><img class="features-gallery__img--subcat features-gallery__img----subcat5" src="img/chop.png" alt="Chop"/></figure>
+          </article>
+          <article class="features-gallery__item--subcat">
+            <h3 class="features-gallery-title--subcat">Botellas</h3>
+            <figure class="features-gallery__fig--subcat"><img class="features-gallery__img--subcat features-gallery__img----subcat6" src="img/botellas.png" alt="Botellas"/></figure>
           </article>
         </article>
       </section>

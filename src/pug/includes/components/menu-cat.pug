@@ -1,0 +1,5 @@
+mixin menuCat(items)
+  ul.menu-cat
+    each item in items
+      li.menu-cat__item
+          a.menu-cat__link(href=item.url) #{item.name}

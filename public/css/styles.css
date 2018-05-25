@@ -687,14 +687,14 @@ figure {
 @media (max-width: 32rem) {
   .navbar {
     position: absolute;
-    top: 85px;
+    top: 80px;
     bottom: 0;
     width: 100%;
     z-index: 999;
     bottom: 100%;
     transition: all ease-in-out .4s; }
     .navbar .menu {
-      transition: opacity ease-in-out .4s;
+      transition: opacity ease-in-out .3s;
       opacity: 0; } }
 
 .navbar--active {

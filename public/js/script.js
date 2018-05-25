@@ -21,6 +21,8 @@ function tinySlider() {
         }),
         next=document.getElementById('nextS'),
         prev = document.getElementById('prevS')
+      if (slider) {
+          
         slider.play();
         prev.parentElement.addEventListener('click', e => {
           if (e.target===prev) {
@@ -29,6 +31,7 @@ function tinySlider() {
             slider.goTo('next');
           }
         })
+      }
     }
     
 
@@ -37,7 +40,9 @@ function tinySlider() {
 tinySlider()
 function scaleHeight(itemClass, factor) {
   const element = document.querySelector('.' + itemClass);
-
+  if (!element) {
+    return
+  }
   let width = window.getComputedStyle(element).getPropertyValue("width"),
     height = (parseFloat(width, 10) * factor) + 'px';
   element.parentElement.style.setProperty("--item-height", height)
@@ -45,6 +50,10 @@ function scaleHeight(itemClass, factor) {
 function scaleHeightM(itemClass, factor = 1) {
   const element = document.querySelector('.' + itemClass),
     elements = [...document.getElementsByClassName(itemClass)];
+  
+  if (!element) {
+    return
+  }
 
   let width = window.getComputedStyle(element).getPropertyValue("width"),
     height = (parseFloat(width, 10) * factor) + 'px';
@@ -81,8 +90,11 @@ window.addEventListener('resize', e => {
 })
 
 function scaleBtnWidth(itemId, factor) {
-  const item = document.getElementById(itemId),
-    height = window.getComputedStyle(item).getPropertyValue("height"),
+  const item = document.getElementById(itemId);
+  if (!item) {
+    return
+  }
+  const height = window.getComputedStyle(item).getPropertyValue("height"),
     width = (parseFloat(height, 10) * factor) + 'px';
   // item.style.width = width;
   console.log(height, width, item)
@@ -102,7 +114,7 @@ function navBarMobileDisplay() {
 
   trigger.addEventListener('click', e => {
     const icon = document.querySelector('.menu-icon')
-    // console.log(e.target, icon)
+    console.log(e.target, icon)
     icon.classList.toggle('menu-icon--active')
     nav.classList.toggle('navbar--active')
   })
