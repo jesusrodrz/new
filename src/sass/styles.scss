@@ -152,10 +152,10 @@
 .description{
   // background: url('./../img/banner-back.jpg') black ;
   // background-image: url('./../img/banner-back.jpg'),  linear-gradient(to right, rgba($secondary-color-light,1), rgba($secondary-color,.9));
-  background-image: url('./../img/b-back.png');
-  background-image: linear-gradient(to right, rgba($secondary-color-light,1), rgba($secondary-color-light,.2)), url('./../img/b-back.jpg');
+  background-image: linear-gradient(to right, rgba($secondary-color-light,1), rgba($secondary-color-light,.2)), url('./../img/p-back.png');
   $gradient:lighten($secondary-color-light,15);
-  background-image: linear-gradient(to right, rgba($gradient,1) 0%,rgba($gradient,1)40%, rgba($gradient,0.8) 100%),linear-gradient(to right, rgba($gradient,.5), rgba($gradient,.5)), url(./../img/banner-back.png);
+  background-image: linear-gradient(to right, rgba($gradient,1) 0%,rgba($gradient,1)40%, rgba($gradient,0.8) 100%),linear-gradient(to right, rgba($gradient,.5), rgba($gradient,.5)), url(./../img/p-back.png);
+  background-image: url('./../img/p-back.png');
   background-position: center left;
   background-size: cover;
   padding: 3em 5em;

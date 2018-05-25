@@ -1715,9 +1715,9 @@ figure {
       text-align: center; } }
 
 .description {
-  background-image: url("./../img/b-back.png");
-  background-image: linear-gradient(to right, #cccccc, rgba(204, 204, 204, 0.2)), url("./../img/b-back.jpg");
-  background-image: linear-gradient(to right, #f2f2f2 0%, #f2f2f2 40%, rgba(242, 242, 242, 0.8) 100%), linear-gradient(to right, rgba(242, 242, 242, 0.5), rgba(242, 242, 242, 0.5)), url(./../img/banner-back.png);
+  background-image: linear-gradient(to right, #cccccc, rgba(204, 204, 204, 0.2)), url("./../img/p-back.png");
+  background-image: linear-gradient(to right, #f2f2f2 0%, #f2f2f2 40%, rgba(242, 242, 242, 0.8) 100%), linear-gradient(to right, rgba(242, 242, 242, 0.5), rgba(242, 242, 242, 0.5)), url(./../img/p-back.png);
+  background-image: url("./../img/p-back.png");
   background-position: center left;
   background-size: cover;
   padding: 3em 5em; }
