@@ -8,17 +8,21 @@
   justify-content: center;
   align-items: center;
   padding: .5rem 2rem;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .4s;
   [class^="icon-"]:before{
     color: darken($secondary-color-light,10);
+    margin-right: .5em;
+  }
+  &:hover{
+    background-color: $secondary-color-light;
+    // color: white;
   }
   @include media(sm){
-    // --btn-width:100%;
     --btn-width:48px;
     padding: .5rem;
     background-color: lighten($secondary-color,10);
     width: var(--btn-width);
     height: var(--btn-width);
-    // height: 100%;
     border-radius: 0;
     border: none;
     [class^="icon-"]:before{

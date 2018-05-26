@@ -136,3 +136,33 @@ function placeholder() {
 }
 placeholder();
 
+function lightbox() {
+  const lightbox = document.getElementById('lightbox')
+  if (lightbox) {
+    
+    const images = [...lightbox.getElementsByTagName('img')],
+      screen = images[0]
+    let currentImage = screen.src,
+    currentElement = images[1];
+
+    lightbox.addEventListener('click', e => {
+      const target = e.target,
+        index = images.indexOf(target);
+      if (index && screen!==target) {
+        
+        const elementTarget = images[index],
+          newImage = elementTarget.src
+        
+        screen.src = newImage;
+        currentImage = newImage;
+        
+        currentElement.parentElement.classList.toggle('lightbox__item--active')
+        currentElement = elementTarget
+        
+        elementTarget.parentElement.classList.toggle('lightbox__item--active')
+      }
+
+    })
+  }
+}
+lightbox()

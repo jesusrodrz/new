@@ -8,9 +8,17 @@
   &__screen{
     grid-column:1/span 4;
   }
-  &__fig,&__img{
+  &__item,&__img{
     width: 100%;
     height: 100%;
+  }
+  &__item{
+    cursor: pointer;
+    &--active{
+      outline-color: lighten($secondary-color,15);
+      outline-style: solid;
+      outline-width: 2px;
+    }
   }
   
 }

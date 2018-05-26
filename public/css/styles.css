@@ -643,9 +643,13 @@ figure {
   color: #000;
   justify-content: center;
   align-items: center;
-  padding: .5rem 2rem; }
+  padding: .5rem 2rem;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s; }
   .chat-btn [class^="icon-"]:before {
-    color: #b3b3b3; }
+    color: #b3b3b3;
+    margin-right: .5em; }
+  .chat-btn:hover {
+    background-color: #ccc; }
   @media (max-width: 32rem) {
     .chat-btn {
       --btn-width:48px;
@@ -830,6 +834,8 @@ figure {
     text-decoration: none;
     font-size: 2em;
     text-align: left; }
+    .social-menu__link:hover {
+      color: #EC1C24; }
 
 .navbar-cat {
   display: flex;
@@ -876,6 +882,8 @@ figure {
     .menu-cat__item:not(:last-child) a {
       color: #4d4d4d;
       text-decoration: none; }
+  .menu-cat__item:hover .menu-cat__link {
+    text-decoration: underline; }
   .menu-cat__link {
     text-transform: uppercase;
     color: black;
@@ -894,7 +902,6 @@ figure {
       grid-template-columns: 1fr 1fr 1fr; } }
   .features-gallery__item-title, .features-gallery__item-title--subcat {
     margin: 0;
-    padding: .8em;
     text-align: center;
     font-size: .6em;
     font-size: .8em;
@@ -922,11 +929,17 @@ figure {
         .features-gallery__item-title--subcat {
           background-color: rgba(255, 255, 255, 0.7);
           border: solid 5px rgba(255, 255, 255, 0.3); } }
+    .features-gallery__item-title:hover, .features-gallery__item-title--subcat:hover {
+      border: solid 5px #c51017;
+      background: #EC1C24;
+      background-clip: border-box;
+      color: white; }
   .features-gallery__item, .features-gallery__item--subcat {
     position: relative;
     width: 100%;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    transition: all ease .4s; }
     .features-gallery__item--subcat {
       position: relative; }
   .features-gallery__fig, .features-gallery__fig--subcat {
@@ -987,6 +1000,11 @@ figure {
         border: 3px solid gray;
         font-size: 2.5em;
         background-color: #f2f2f2; } }
+  .features-gallery__link, .features-gallery__link--subcat {
+    text-decoration: none;
+    color: inherit;
+    padding: .8em;
+    display: inline-block; }
   .features-gallery__item:hover .features-gallery__logo, .features-gallery__item--subcat:hover .features-gallery__logo {
     background-color: #EC1C24;
     color: white; }
@@ -1072,7 +1090,8 @@ figure {
     background-color: #666;
     width: 2.5rem;
     cursor: pointer;
-    color: white; }
+    color: white;
+    transition: all cubic-bezier(0.68, -0.55, 0.265, 2.55) 0.4s; }
     @media (max-width: 32rem) {
       .search-bar__btn {
         height: 26px;
@@ -1083,6 +1102,10 @@ figure {
         font-size: .9em;
         -webkit-transform: translateY(-50%);
                 transform: translateY(-50%); } }
+    .search-bar__btn:hover {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+      box-shadow: 1px 1px 1px #777; }
 
 .blog-grid {
   --item-height:50vh;
@@ -1198,7 +1221,10 @@ figure {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s; }
+    .form-subcribe__btn:hover {
+      background-color: #EC1C24; }
   .form-subcribe__label {
     color: #cecece;
     font-size: 1.2em;
@@ -1289,6 +1315,9 @@ figure {
     background-color: #EC1C24;
     padding: .5rem 2rem;
     cursor: pointer; }
+    .form-contact__btn:hover {
+      transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+      background-color: #bb1016; }
 
 .slider {
   width: 100%;
@@ -1624,9 +1653,15 @@ figure {
   grid-gap: 16px; }
   .lightbox__screen {
     grid-column: 1/span 4; }
-  .lightbox__fig, .lightbox__img {
+  .lightbox__item, .lightbox__img {
     width: 100%;
     height: 100%; }
+  .lightbox__item {
+    cursor: pointer; }
+    .lightbox__item--active {
+      outline-color: #8c8c8c;
+      outline-style: solid;
+      outline-width: 2px; }
 
 .section__title {
   font-family: Merriweather;
@@ -1731,7 +1766,10 @@ figure {
   background-color: #333;
   color: white;
   text-transform: uppercase;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: all cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s; }
+  .single-item__btn:hover {
+    background-color: #EC1C24; }
 
 .single-item__title, .logo-gallery--single {
   position: relative;

@@ -20,7 +20,7 @@
   }
   &__item-title{
     margin: 0;
-    padding: .8em;
+    
     text-align: center;
     font-size: .6em;
     font-size: .8em;
@@ -50,6 +50,12 @@
       transform: translateY(-50%);
       bottom: unset;
     }
+    &:hover{
+      border: solid 5px darken($primary-color,10);
+      background: $primary-color;
+      background-clip: border-box;
+      color: white;
+    }
   }
   
   &__item{
@@ -57,6 +63,7 @@
     width: 100%;
     margin: 0;
     padding: 0;
+    transition: all ease .4s;
     &--subcat{
       @extend .features-gallery__item;
       position: relative;
@@ -92,6 +99,7 @@
       }
     }
   }
+
   &__img{
     display: block;
     height: 100%;
@@ -137,7 +145,15 @@
 
     }
   }
-  
+  &__link{
+    text-decoration: none;
+    color: inherit;
+    padding: .8em;
+    display: inline-block;
+    &--subcat{
+      @extend .features-gallery__link;
+    }
+  }
   &__item:hover &__logo{ 
     background-color: $primary-color;
     color: white;

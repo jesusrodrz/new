@@ -23,6 +23,10 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: all cubic-bezier(0.215, 0.610, 0.355, 1) .5s;
+    &:hover{
+      background-color: $primary-color;
+    }
   }
   &__label{
     color:#cecece;
@@ -151,5 +155,9 @@
     background-color: $primary-color;
     padding: .5rem 2rem;
     cursor: pointer;
+    &:hover{
+      transition: all cubic-bezier(0.215, 0.610, 0.355, 1) .5s;
+      background-color: darken($primary-color,12);
+    }
   }
 }

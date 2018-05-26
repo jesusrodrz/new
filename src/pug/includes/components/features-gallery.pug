@@ -5,7 +5,8 @@ mixin featureGallery(items,itemClass='features-gallery',modifier='')
     each item,index in items
       -var nth = 1+index
       article(class=itemClass+'__item'+modifier)
-        h3(class=itemClass+'__item-title'+modifier) #{item.name}
+        h3(class=itemClass+'__item-title'+modifier)
+          a(href="#",class=itemClass+'__link'+modifier) #{item.name}
         if item.icon
           div(class=itemClass+'__logo'+modifier)
             span(class='icon-'+item.icon)

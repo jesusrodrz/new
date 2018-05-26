@@ -58,5 +58,11 @@
       transform: translateY(-50%); 
       
     }
+    transition: all cubic-bezier(0.68, -0.55, 0.265, 2.55) .4s;
+    &:hover{
+      transform: scale(1.1);
+      box-shadow: 1px 1px 1px #777
+      
+    }
   }
 }
