@@ -1,6 +1,6 @@
 include ../components/navigation-secondary
 include ../components/feature-list
-- var footerNavItems = [{name:'Nosotros',url:'#',subMenu:[{name:'Historia',url:'#'},{name:'Instalaciones',url:'#'},{name:'Nuestros Clientes',url:'#'}]},{name:'Productos',url:'#',subMenu:[{name:'Categorías',url:'#'},{name:'Marcas',url:'#'},{name:'Reposición de productos',url:'#'},]},{name:'Blog',url:'#',subMenu:[{name:'Lanzamientos',url:'#'},{name:'Responsabilidad social',url:'#'},{name:'Tips y consejos',url:'#'},{name:'Eventos',url:'#'},]}]
+- var footerNavItems = [{name:'Nosotros',url:'#',subMenu:[{name:'Historia',url:'#'},{name:'Instalaciones',url:'#'},{name:'Nuestros Clientes',url:'#'}]},{name:'Productos',url:'category.html',subMenu:[{name:'Categorías',url:'#'},{name:'Marcas',url:'#'},{name:'Reposición de productos',url:'#'},]},{name:'Blog',url:'#',subMenu:[{name:'Lanzamientos',url:'#'},{name:'Responsabilidad social',url:'#'},{name:'Tips y consejos',url:'#'},{name:'Eventos',url:'#'},]}]
 
 footer.main-footer
   section.footer-nav
@@ -15,7 +15,7 @@ footer.main-footer
           span.form-subcribe__terms
             input.form-subcribe__checkbox#subcribeCheckbox(type="checkbox", name="subcribe")
             |  Acepto los #[a.form-subcribe__link(href='#') términos y condiciones]
-  section.section--footer.contact
+  section.section--footer.contact#contact
     .section--wrapper.contact__container
       h2.section__title--footer Contacto
       form.form-contact#contact(action="contact", method="get")

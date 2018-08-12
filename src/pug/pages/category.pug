@@ -3,7 +3,7 @@ include ../includes/components/menu-cat
 include ../includes/components/features-gallery
 include ../includes/components/logo-cat
 block main
-  - var catLinks = [{name:'Productos',url:'#'},{name:'Categorías',url:'#'},{name:'Cristalería',url:'#'}];
+  - var catLinks = [{name:'Productos',url:'#'},{name:'Categorías',url:'category.html'},{name:'Cristalería',url:'category.html'}];
   - var features = [{name:'Vasos',src:'img/vasos.png'},{name:'Copas',src:'img/copas.png'},{name:'Jarras',src:'img/jarras.png'},{name:'Fuentes',src:'img/fuentes.png'},{name:'Chop',src:'img/chop.png'},{name:'Botellas',src:'img/botellas.png'}]
   - var logos = [{src:'img/cristar.png',url:'#'},{src:'img/figueiredo.png',url:'#'},{src:'img/luminarce.png',url:'#'},{src:'img/marinex2.png',url:'#'},{src:'img/pyrex.png',url:'#'}]
   
@@ -24,7 +24,7 @@ block main
           |Vasos en todas las variedades: para agua, cocktail, whisky, capuchino, cerveza, chopp cervecero,shots, etc. En todos los tamaños y distintas líneas. Jarras, hieleras, licoreras, garrafas en fina cristalería.
     section.section
       h2.section__title Productos
-      +featureGallery(features,'features-gallery','--subcat')
+      +featureGallery(features,'category-item.html','features-gallery','--subcat')
     section.section
       h2.section__title Marcas
       +logoCat(logos)

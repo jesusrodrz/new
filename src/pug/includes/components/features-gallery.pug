@@ -1,4 +1,4 @@
-mixin featureGallery(items,itemClass='features-gallery',modifier='')
+mixin featureGallery(items,url,itemClass='features-gallery',modifier='')
   //- if modifier == undfined
   //-   - modifier=''
   article(class=itemClass+modifier)
@@ -6,7 +6,7 @@ mixin featureGallery(items,itemClass='features-gallery',modifier='')
       -var nth = 1+index
       article(class=itemClass+'__item'+modifier)
         h3(class=itemClass+'__item-title'+modifier)
-          a(href="#",class=itemClass+'__link'+modifier) #{item.name}
+          a(href=url,class=itemClass+'__link'+modifier) #{item.name}
         if item.icon
           div(class=itemClass+'__logo'+modifier)
             span(class='icon-'+item.icon)
