@@ -2,6 +2,9 @@ extends ../includes/template
 include ../includes/components/menu-cat
 include ../includes/components/features-gallery
 include ../includes/components/logo-cat
+
+block metatags
+  title Cristaleria - Ychicawa
 block main
   - var catLinks = [{name:'Productos',url:'#'},{name:'Categorías',url:'category.html'},{name:'Cristalería',url:'category.html'}];
   - var features = [{name:'Vasos',src:'img/vasos.png'},{name:'Copas',src:'img/copas.png'},{name:'Jarras',src:'img/jarras.png'},{name:'Fuentes',src:'img/fuentes.png'},{name:'Chop',src:'img/chop.png'},{name:'Botellas',src:'img/botellas.png'}]

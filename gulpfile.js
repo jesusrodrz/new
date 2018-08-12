@@ -51,6 +51,6 @@ gulp.task('default', () => {
 
 gulp.task('prod', () => {
   // gulp.watch(['src/pug/**/*.pug', 'src/sass/**/*.scss'], ['pug', 'styles'])
-  watch('./src/sass/**/*.scss', () => gulp.start('styles:prod'));
-  watch('./src/pug/**/*.pug', () => gulp.start('pug:prod'));
+  watch('./src/sass/**/*.scss', () => [gulp.start('styles:prod'), gulp.start('styles')]);
+  watch('./src/pug/**/*.pug', () => [gulp.start('pug:prod'), gulp.start('pug')]);
 });
