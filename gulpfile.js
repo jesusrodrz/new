@@ -21,6 +21,14 @@ gulp.task('styles', () => {
     .pipe(gulp.dest('./public/css'))
 });
 
+gulp.task('styles:prod', () => {
+  gulp.src('./src/sass/*.scss')
+    .pipe(plumber())
+    .pipe(sass(sassOptions))
+    .pipe(autoprefixer({ version: ['> 1%, last 2 versions, Firefox ESR, Opera 12.1'] }))
+    .pipe(gulp.dest('./docs/css'))
+});
+
 gulp.task('pug', () => {
   gulp.src('./src/pug/pages/*.pug')
     .pipe(plumber())
@@ -28,8 +36,21 @@ gulp.task('pug', () => {
     .pipe(gulp.dest('./public'))
 });
 
+gulp.task('pug:prod', () => {
+  gulp.src('./src/pug/pages/*.pug')
+    .pipe(plumber())
+    .pipe(pug(pugOptions))
+    .pipe(gulp.dest('./docs'))
+});
+
 gulp.task('default', () => {
   // gulp.watch(['src/pug/**/*.pug', 'src/sass/**/*.scss'], ['pug', 'styles'])
   watch('./src/sass/**/*.scss', () => gulp.start('styles'));
   watch('./src/pug/**/*.pug', () => gulp.start('pug'));
+});
+
+gulp.task('prod', () => {
+  // gulp.watch(['src/pug/**/*.pug', 'src/sass/**/*.scss'], ['pug', 'styles'])
+  watch('./src/sass/**/*.scss', () => gulp.start('styles:prod'));
+  watch('./src/pug/**/*.pug', () => gulp.start('pug:prod'));
 });
